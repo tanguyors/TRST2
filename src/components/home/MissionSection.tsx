@@ -118,8 +118,12 @@ export function MissionSection() {
                     <circle cx="50" cy="50" r="6" fill="currentColor" />
                     {[...Array(6)].map((_, i) => {
                       const angle = (i * 60 * Math.PI) / 180;
+                      const x1 = Math.round((50 + 35 * Math.cos(angle)) * 100) / 100;
+                      const y1 = Math.round((50 + 35 * Math.sin(angle)) * 100) / 100;
+                      const x2 = Math.round((50 + 48 * Math.cos(angle)) * 100) / 100;
+                      const y2 = Math.round((50 + 48 * Math.sin(angle)) * 100) / 100;
                       return (
-                        <line key={i} x1={50 + 35 * Math.cos(angle)} y1={50 + 35 * Math.sin(angle)} x2={50 + 48 * Math.cos(angle)} y2={50 + 48 * Math.sin(angle)} stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+                        <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
                       );
                     })}
                   </svg>

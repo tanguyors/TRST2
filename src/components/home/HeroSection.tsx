@@ -11,7 +11,7 @@ export function HeroSection() {
   const yearsOfService = new Date().getFullYear() - SITE_CONFIG.foundedYear;
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center bg-primary">
+    <section className="relative overflow-hidden min-h-[100svh] md:min-h-screen flex items-center bg-primary">
       {/* Animated mesh gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -22,7 +22,7 @@ export function HeroSection() {
             y: [0, -30, 0],
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-accent blur-[120px]"
+          className="absolute -top-32 -left-32 w-[400px] md:w-[600px] h-[400px] md:h-[600px] rounded-full bg-accent blur-[120px]"
         />
         <motion.div
           animate={{
@@ -51,15 +51,15 @@ export function HeroSection() {
       }} />
 
       {/* Main content - Split layout */}
-      <div className="container-custom relative z-10 py-32 lg:py-40">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="container-custom relative z-10 px-4 py-20 md:py-28 lg:py-40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left - Text content */}
           <div>
             <motion.h1
               initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.4, 0.25, 1] }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] font-black text-white leading-[1.05] mb-6 tracking-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] 2xl:text-[5.5rem] font-black text-white leading-[1.05] mb-4 md:mb-6 tracking-tight"
             >
               {t('title')}
             </motion.h1>
@@ -69,7 +69,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.25, ease: [0.25, 0.4, 0.25, 1] }}
             >
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-accent via-accent-light to-gradient-end bg-clip-text text-transparent mb-8">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-accent via-accent-light to-gradient-end bg-clip-text text-transparent mb-6 md:mb-8">
                 {t('subtitle')}
               </p>
             </motion.div>
@@ -78,7 +78,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
-              className="text-lg md:text-xl text-white/60 mb-12 max-w-xl leading-relaxed"
+              className="text-base md:text-lg lg:text-xl text-white/60 mb-8 md:mb-12 max-w-xl leading-relaxed"
             >
               {t('description')}
             </motion.p>
@@ -87,18 +87,18 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.55, ease: [0.25, 0.4, 0.25, 1] }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4"
             >
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95"
+                className="group inline-flex items-center justify-center gap-2 md:gap-3 rounded-full bg-white px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95"
               >
                 <Heart className="h-4 w-4 group-hover:scale-110 transition-transform" />
                 {t('cta_join')}
               </Link>
               <Link
                 href="/actions"
-                className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/[0.05] backdrop-blur-md px-8 py-4 text-sm font-bold text-white hover:bg-white/[0.1] hover:border-white/30 transition-all duration-300 hover:scale-105"
+                className="group inline-flex items-center justify-center gap-2 md:gap-3 rounded-full border border-white/20 bg-white/[0.05] backdrop-blur-md px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold text-white hover:bg-white/[0.1] hover:border-white/30 transition-all duration-300 hover:scale-105"
               >
                 {t('cta_discover')}
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -121,10 +121,10 @@ export function HeroSection() {
                 <circle cx="50" cy="50" r="6" fill="white" />
                 {[...Array(6)].map((_, i) => {
                   const angle = (i * 60 * Math.PI) / 180;
-                  const x1 = 50 + 35 * Math.cos(angle);
-                  const y1 = 50 + 35 * Math.sin(angle);
-                  const x2 = 50 + 48 * Math.cos(angle);
-                  const y2 = 50 + 48 * Math.sin(angle);
+                  const x1 = Math.round((50 + 35 * Math.cos(angle)) * 100) / 100;
+                  const y1 = Math.round((50 + 35 * Math.sin(angle)) * 100) / 100;
+                  const x2 = Math.round((50 + 48 * Math.cos(angle)) * 100) / 100;
+                  const y2 = Math.round((50 + 48 * Math.sin(angle)) * 100) / 100;
                   return (
                     <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="white" strokeWidth="3" strokeLinecap="round" />
                   );
@@ -213,14 +213,14 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+        className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-2"
       >
         <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Scroll</span>
         <ChevronDown className="h-4 w-4 text-white/30 animate-scroll-bounce" />
       </motion.div>
 
       {/* Bottom fade to white */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white via-white/80 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 md:h-40 bg-gradient-to-t from-white via-white/80 to-transparent" />
     </section>
   );
 }

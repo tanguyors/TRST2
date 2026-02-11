@@ -256,24 +256,24 @@ export function ContactContent() {
       </section>
 
       {/* Meeting Place Gallery */}
-      <section className="py-24 md:py-32 bg-warm-gray">
-        <div className="container-custom">
+      <section className="py-12 md:py-24 lg:py-32 bg-warm-gray">
+        <div className="container-custom px-4">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
-                <MapPin className="w-4 h-4" />
-                Notre Lieu de Rencontre
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-primary/10 border border-primary/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.2em] text-primary mb-3 md:mb-4">
+                <MapPin className="w-3 h-3 md:w-4 md:h-4" />
+                <span className="hidden xs:inline">Notre Lieu de Rencontre</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-text-dark mb-3 md:mb-4 px-2" style={{ fontFamily: 'var(--font-heading)' }}>
                 Siam Bayshore Resort, Pattaya
               </h2>
-              <p className="text-lg text-text-light max-w-2xl mx-auto">
+              <p className="text-sm md:text-base lg:text-lg text-text-light max-w-2xl mx-auto px-4">
                 Nous nous réunissons dans un cadre convivial au bord de la plage
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 image: '/images/about/installation-2025.jpg',
@@ -294,9 +294,9 @@ export function ContactContent() {
               <ScrollReveal key={item.title} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+                  className="group relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                 >
-                  <div className="relative h-64 overflow-hidden bg-warm-gray">
+                  <div className="relative h-48 md:h-56 lg:h-64 overflow-hidden bg-warm-gray">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -305,9 +305,9 @@ export function ContactContent() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
                   </div>
-                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-sm text-white/80">{item.description}</p>
+                  <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5 lg:p-6 text-white">
+                    <h3 className="text-base md:text-lg lg:text-xl font-bold mb-1.5 md:mb-2">{item.title}</h3>
+                    <p className="text-xs md:text-sm text-white/80">{item.description}</p>
                   </div>
                 </motion.div>
               </ScrollReveal>

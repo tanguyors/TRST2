@@ -157,24 +157,24 @@ export function DonateContent() {
       </section>
 
       {/* Impact Gallery */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
+      <section className="py-12 md:py-24 lg:py-32 bg-white">
+        <div className="container-custom px-4">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
-                <Camera className="w-4 h-4" />
-                L'Impact de Vos Dons
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.2em] text-accent mb-3 md:mb-4">
+                <Camera className="w-3 h-3 md:w-4 md:h-4" />
+                <span className="hidden xs:inline">L'Impact de Vos Dons</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-text-dark mb-3 md:mb-4 px-2" style={{ fontFamily: 'var(--font-heading)' }}>
                 Vos Dons en Action
               </h2>
-              <p className="text-lg text-text-light max-w-2xl mx-auto">
+              <p className="text-sm md:text-base lg:text-lg text-text-light max-w-2xl mx-auto px-4">
                 Découvrez comment vos contributions financent nos projets humanitaires et aident les communautés locales
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 image: '/images/about/ywca-donation.jpg',
@@ -216,9 +216,9 @@ export function DonateContent() {
               <ScrollReveal key={project.title} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                  className="group relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
                 >
-                  <div className="relative h-56 overflow-hidden bg-warm-gray">
+                  <div className="relative h-40 md:h-48 lg:h-56 overflow-hidden bg-warm-gray">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -226,15 +226,15 @@ export function DonateContent() {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute top-4 right-4 bg-accent text-white text-sm font-bold px-3 py-1.5 rounded-full shadow-lg">
+                    <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-accent text-white text-xs md:text-sm font-bold px-2.5 py-1 md:px-3 md:py-1.5 rounded-full shadow-lg">
                       {project.amount}
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-text-dark mb-2 group-hover:text-accent transition-colors">
+                  <div className="p-4 md:p-5 lg:p-6">
+                    <h3 className="text-sm md:text-base lg:text-lg font-bold text-text-dark mb-1.5 md:mb-2 group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-text-light">
+                    <p className="text-xs md:text-sm text-text-light line-clamp-2">
                       {project.description}
                     </p>
                   </div>
@@ -244,16 +244,16 @@ export function DonateContent() {
           </div>
 
           <ScrollReveal delay={0.3}>
-            <div className="mt-12 text-center">
-              <p className="text-text-light mb-6 max-w-2xl mx-auto">
+            <div className="mt-8 md:mt-12 text-center px-4">
+              <p className="text-sm md:text-base text-text-light mb-4 md:mb-6 max-w-2xl mx-auto">
                 Chaque baht compte et contribue à améliorer la vie des personnes dans le besoin. Merci pour votre générosité !
               </p>
               <Link
                 href="/actions"
-                className="inline-flex items-center gap-2 text-accent font-bold hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 text-sm md:text-base text-accent font-bold hover:gap-4 transition-all"
               >
                 Voir tous nos projets
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </Link>
             </div>
           </ScrollReveal>

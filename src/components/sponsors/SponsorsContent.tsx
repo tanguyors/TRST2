@@ -314,24 +314,24 @@ export function SponsorsContent() {
       </section>
 
       {/* Partnerships in Action Gallery */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container-custom">
+      <section className="py-12 md:py-24 lg:py-32 bg-white">
+        <div className="container-custom px-4">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
-                <Sparkles className="w-4 h-4" />
-                Nos Collaborations
+            <div className="text-center mb-8 md:mb-12 lg:mb-16">
+              <div className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.2em] text-accent mb-3 md:mb-4">
+                <Sparkles className="w-3 h-3 md:w-4 md:h-4" />
+                <span className="hidden xs:inline">Nos Collaborations</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-text-dark mb-4 md:mb-6 px-2" style={{ fontFamily: 'var(--font-heading)' }}>
                 Partenariats en Action
               </h2>
-              <p className="text-xl text-text-light max-w-2xl mx-auto">
+              <p className="text-sm md:text-lg lg:text-xl text-text-light max-w-2xl mx-auto px-4">
                 Découvrez les projets réalisés grâce à la collaboration avec nos partenaires
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 image: '/images/actions/filtre-eau-karen.jpg',
@@ -355,9 +355,9 @@ export function SponsorsContent() {
               <ScrollReveal key={project.title} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+                  className="group relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                 >
-                  <div className="relative h-64 overflow-hidden bg-warm-gray">
+                  <div className="relative h-48 md:h-56 lg:h-64 overflow-hidden bg-warm-gray">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -366,12 +366,12 @@ export function SponsorsContent() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   </div>
-                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                    <div className="inline-block text-xs font-bold text-accent bg-white/90 rounded-full px-3 py-1 mb-3 self-start">
+                  <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5 lg:p-6 text-white">
+                    <div className="inline-block text-[10px] md:text-xs font-bold text-accent bg-white/90 rounded-full px-2.5 py-0.5 md:px-3 md:py-1 mb-2 md:mb-3 self-start">
                       {project.partner}
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-sm text-white/80">{project.description}</p>
+                    <h3 className="text-base md:text-lg lg:text-xl font-bold mb-1.5 md:mb-2">{project.title}</h3>
+                    <p className="text-xs md:text-sm text-white/80 line-clamp-2">{project.description}</p>
                   </div>
                 </motion.div>
               </ScrollReveal>

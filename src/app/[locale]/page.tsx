@@ -5,6 +5,7 @@ import { MissionSection } from '@/components/home/MissionSection';
 import { RecentActions } from '@/components/home/RecentActions';
 import { StatsCounter } from '@/components/home/StatsCounter';
 import { AboutPreview } from '@/components/home/AboutPreview';
+import { FeaturedMoments } from '@/components/home/FeaturedMoments';
 import { TestimonialsSection } from '@/components/home/TestimonialsSection';
 import { CTASection } from '@/components/home/CTASection';
 
@@ -24,6 +25,7 @@ export default async function HomePage({ params }: Props) {
       <StatsCounter />
       <AboutPreview />
       <RecentActions />
+      <FeaturedMoments />
       <TestimonialsSection />
       <CTASection />
     </>

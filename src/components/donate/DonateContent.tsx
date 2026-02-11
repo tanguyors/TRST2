@@ -2,9 +2,10 @@
 
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { Link } from '@/i18n/navigation';
-import { Heart, Building2, Copy, CheckCircle2, Mail, Info, Users, ArrowRight } from 'lucide-react';
+import { Heart, Building2, Copy, CheckCircle2, Mail, Info, Users, ArrowRight, Camera } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export function DonateContent() {
   const [copiedField, setCopiedField] = useState<string | null>(null);
@@ -150,6 +151,110 @@ export function DonateContent() {
                   contact@rotary-pattaya-marina.org
                 </a>
               </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Impact Gallery */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
+                <Camera className="w-4 h-4" />
+                L'Impact de Vos Dons
+              </div>
+              <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
+                Vos Dons en Action
+              </h2>
+              <p className="text-lg text-text-light max-w-2xl mx-auto">
+                Découvrez comment vos contributions financent nos projets humanitaires et aident les communautés locales
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                image: '/images/about/ywca-donation.jpg',
+                title: 'Soutien à la YWCA',
+                amount: '130,000 ฿',
+                description: 'Aide aux femmes et familles en difficulté'
+              },
+              {
+                image: '/images/about/prison-donation.jpg',
+                title: 'Aide aux Détenus',
+                amount: '50,000 ฿',
+                description: 'Distribution de fournitures essentielles'
+              },
+              {
+                image: '/images/actions/filtre-eau-karen.jpg',
+                title: 'Eau Potable Villages Karen',
+                amount: '200,000 ฿',
+                description: 'Systèmes de filtration et distribution'
+              },
+              {
+                image: '/images/actions/electricite-mae-song-noi.jpg',
+                title: 'Électrification Rurale',
+                amount: '150,000 ฿',
+                description: 'Installation électrique Mae Song Noi'
+              },
+              {
+                image: '/images/about/women-day.jpg',
+                title: 'Journée de la Femme',
+                amount: '30,000 ฿',
+                description: 'Célébration et soutien aux femmes'
+              },
+              {
+                image: '/images/actions/ecole-hua-yai.jpg',
+                title: 'Fournitures Scolaires',
+                amount: '80,000 ฿',
+                description: 'Équipement pour écoles défavorisées'
+              },
+            ].map((project, index) => (
+              <ScrollReveal key={project.title} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+                >
+                  <div className="relative h-56 overflow-hidden bg-warm-gray">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute top-4 right-4 bg-accent text-white text-sm font-bold px-3 py-1.5 rounded-full shadow-lg">
+                      {project.amount}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-text-dark mb-2 group-hover:text-accent transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-text-light">
+                      {project.description}
+                    </p>
+                  </div>
+                </motion.div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={0.3}>
+            <div className="mt-12 text-center">
+              <p className="text-text-light mb-6 max-w-2xl mx-auto">
+                Chaque baht compte et contribue à améliorer la vie des personnes dans le besoin. Merci pour votre générosité !
+              </p>
+              <Link
+                href="/actions"
+                className="inline-flex items-center gap-2 text-accent font-bold hover:gap-4 transition-all"
+              >
+                Voir tous nos projets
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </ScrollReveal>
         </div>

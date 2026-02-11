@@ -29,7 +29,11 @@
       "Bash(ls:*)",
       "WebFetch(domain:bacchus-bourbon.fr)",
       "WebFetch(domain:bruxelles-erasme.rotary2150.org)",
-      "WebFetch(domain:bruxelles-tercoigne.rotary2150.org)"
+      "WebFetch(domain:bruxelles-tercoigne.rotary2150.org)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(powershell:*)"
     ]
   }
 }

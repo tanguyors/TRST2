@@ -313,8 +313,75 @@ export function SponsorsContent() {
         </div>
       </section>
 
-      {/* Why Partner With Us */}
+      {/* Partnerships in Action Gallery */}
       <section className="py-24 md:py-32 bg-white">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
+                <Sparkles className="w-4 h-4" />
+                Nos Collaborations
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+                Partenariats en Action
+              </h2>
+              <p className="text-xl text-text-light max-w-2xl mx-auto">
+                Découvrez les projets réalisés grâce à la collaboration avec nos partenaires
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                image: '/images/actions/filtre-eau-karen.jpg',
+                title: 'Distribution d\'Eau Potable',
+                partner: 'Rotary E-Club District 9220',
+                description: 'Installation de systèmes de filtration dans les villages Karen'
+              },
+              {
+                image: '/images/actions/donation-hhn-2016.jpg',
+                title: 'Tournoi de Pétanque',
+                partner: 'Big C Extra',
+                description: 'Événement caritatif au profit de Human Help Network'
+              },
+              {
+                image: '/images/actions/electricite-mae-song-noi.jpg',
+                title: 'Électrification Rurale',
+                partner: 'Rotary Club Bruxelles Erasme',
+                description: 'Projet d\'électricité à Mae Song Noi'
+              },
+            ].map((project, index) => (
+              <ScrollReveal key={project.title} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+                >
+                  <div className="relative h-64 overflow-hidden bg-warm-gray">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  </div>
+                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                    <div className="inline-block text-xs font-bold text-accent bg-white/90 rounded-full px-3 py-1 mb-3 self-start">
+                      {project.partner}
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                    <p className="text-sm text-white/80">{project.description}</p>
+                  </div>
+                </motion.div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Partner With Us */}
+      <section className="py-24 md:py-32 bg-warm-gray">
         <div className="container-custom">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -373,7 +440,7 @@ export function SponsorsContent() {
               <ScrollReveal key={benefit.title} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="bg-warm-gray rounded-3xl p-8 hover:shadow-2xl transition-all duration-300"
+                  className="bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300"
                 >
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.color} flex items-center justify-center mb-6 shadow-lg`}>
                     <benefit.icon className="w-8 h-8 text-white" />

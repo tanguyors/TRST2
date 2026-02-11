@@ -59,7 +59,7 @@ export function ContactContent() {
               x: [0, 30, 0],
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-20 -left-20 w-[400px] h-[400px] rounded-full bg-accent blur-[100px]"
+            className="absolute -top-20 -left-20 w-[400px] h-[400px] rounded-full bg-accent blur-[50px] md:blur-[100px]"
           />
           <motion.div
             animate={{
@@ -68,7 +68,7 @@ export function ContactContent() {
               x: [0, -30, 0],
             }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute top-1/3 -right-20 w-[350px] h-[350px] rounded-full bg-secondary blur-[100px]"
+            className="absolute top-1/3 -right-20 w-[350px] h-[350px] rounded-full bg-secondary blur-[50px] md:blur-[100px]"
           />
         </div>
 
@@ -302,6 +302,9 @@ export function ContactContent() {
                       alt={item.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                      quality={75}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
                   </div>

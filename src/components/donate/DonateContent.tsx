@@ -32,12 +32,12 @@ export function DonateContent() {
           <motion.div
             animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-40 left-1/4 w-[600px] h-[600px] rounded-full bg-accent blur-[150px]"
+            className="absolute -top-40 left-1/4 w-[600px] h-[600px] rounded-full bg-accent blur-[75px] md:blur-[150px]"
           />
           <motion.div
             animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
             transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-            className="absolute -bottom-40 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-end blur-[150px]"
+            className="absolute -bottom-40 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-end blur-[75px] md:blur-[150px]"
           />
         </div>
 
@@ -224,6 +224,9 @@ export function DonateContent() {
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                      quality={75}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-accent text-white text-xs md:text-sm font-bold px-2.5 py-1 md:px-3 md:py-1.5 rounded-full shadow-lg">
@@ -322,12 +325,12 @@ export function DonateContent() {
           <motion.div
             animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-40 left-1/4 w-[600px] h-[600px] rounded-full bg-accent blur-[150px]"
+            className="absolute -top-40 left-1/4 w-[600px] h-[600px] rounded-full bg-accent blur-[75px] md:blur-[150px]"
           />
           <motion.div
             animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
             transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-            className="absolute -bottom-40 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-end blur-[150px]"
+            className="absolute -bottom-40 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-end blur-[75px] md:blur-[150px]"
           />
         </div>
 

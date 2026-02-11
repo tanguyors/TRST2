@@ -22,7 +22,7 @@ export function HeroSection() {
             y: [0, -30, 0],
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-32 -left-32 w-[400px] md:w-[600px] h-[400px] md:h-[600px] rounded-full bg-accent blur-[120px]"
+          className="absolute -top-32 -left-32 w-[400px] md:w-[600px] h-[400px] md:h-[600px] rounded-full bg-accent blur-[60px] md:blur-[120px]"
         />
         <motion.div
           animate={{
@@ -32,7 +32,7 @@ export function HeroSection() {
             y: [0, 40, 0],
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-gradient-end blur-[120px]"
+          className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-gradient-end blur-[60px] md:blur-[120px]"
         />
         <motion.div
           animate={{
@@ -40,7 +40,7 @@ export function HeroSection() {
             opacity: [0.1, 0.2, 0.1],
           }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-          className="absolute -bottom-32 left-1/3 w-[400px] h-[400px] rounded-full bg-secondary blur-[120px]"
+          className="absolute -bottom-32 left-1/3 w-[400px] h-[400px] rounded-full bg-secondary blur-[60px] md:blur-[120px]"
         />
       </div>
 

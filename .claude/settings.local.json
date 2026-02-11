@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.rotary-pattaya-marina.org)",
+      "Bash(git -C \"C:\\\\Users\\\\orsin\\\\Desktop\\\\TRST2\" log --oneline -20)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(for f in *.jpg)",
+      "Bash(npx next build:*)",
+      "Bash(dir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(taskkill:*)",
+      "Bash(npx next dev --help:*)",
+      "Bash(npx next dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx kill-port:*)",
+      "Bash(timeout:*)",
+      "Bash(node -e:*)",
+      "Bash(grep:*)",
+      "Bash(for f in *.mdx)",
+      "Bash(do if ! grep -q \"^image:\" \"$f\")",
+      "Bash(then echo \"$f\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "WebFetch(domain:rotary-pattaya-marina.org)",
+      "Bash(for img in \"polio-pattaya.jpg\" \"human-help.jpg\" \"oeil-pim.jpg\" \"mae-song-noi.jpg\" \"heartt-2000.jpg\" \"filtre-eau-karen.jpg\")",
+      "Bash(do echo \"=== $img utilisé par: ===\")",
+      "Bash(ls:*)",
+      "WebFetch(domain:bacchus-bourbon.fr)",
+      "WebFetch(domain:bruxelles-erasme.rotary2150.org)",
+      "WebFetch(domain:bruxelles-tercoigne.rotary2150.org)"
+    ]
+  }
+}

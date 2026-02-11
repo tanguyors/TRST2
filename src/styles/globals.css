@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette ultra-moderne */
+  --color-primary: #0A0F1E;
+  --color-primary-light: #141B2D;
+  --color-primary-dark: #050811;
+  --color-accent: #3B82F6;
+  --color-accent-light: #60A5FA;
+  --color-accent-dark: #2563EB;
+  --color-secondary: #F59E0B;
+  --color-secondary-light: #FBBF24;
+  --color-secondary-dark: #D97706;
+  --color-warm-beige: #FEF3C7;
+  --color-warm-gray: #F8FAFC;
+  --color-text-dark: #0F172A;
+  --color-text-light: #64748B;
+  --color-success: #10B981;
+  --color-gradient-start: #3B82F6;
+  --color-gradient-end: #8B5CF6;
+
+  --font-sans: 'Inter', 'Noto Sans Thai', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Cal Sans', 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-text-dark bg-white antialiased;
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl;
+    line-height: 1.05;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    line-height: 1.1;
+  }
+
+  /* Dark mode */
+  .dark body {
+    @apply bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-gray-100;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-accent/20 text-accent-dark;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Boutons ultra-modernes - pill shape */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent to-accent-dark px-8 py-4 text-sm font-bold text-white shadow-lg shadow-accent/25 transition-all duration-300 hover:shadow-xl hover:shadow-accent/40 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-accent/30;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full bg-gradient-to-r from-secondary to-secondary-dark px-8 py-4 text-sm font-bold text-white shadow-lg shadow-secondary/25 transition-all duration-300 hover:shadow-xl hover:shadow-secondary/40 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-secondary/30;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full border-2 border-accent bg-transparent px-8 py-4 text-sm font-bold text-accent transition-all duration-300 hover:bg-accent hover:text-white hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-accent/30;
+  }
+
+  /* Cards glassmorphism */
+  .card-modern {
+    @apply relative rounded-3xl bg-white/60 backdrop-blur-md border border-white/20 shadow-xl shadow-black/5 transition-all duration-500;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/10 hover:scale-[1.02];
+  }
+
+  .card-glass {
+    @apply relative rounded-3xl bg-white/40 backdrop-blur-xl border border-white/30 shadow-2xl shadow-black/10;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  /* Gradients */
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary via-primary-light to-primary;
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-br from-secondary via-secondary-light to-accent;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent via-gradient-end to-secondary-light bg-clip-text text-transparent;
+  }
+
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-accent to-gradient-end bg-clip-text text-transparent;
+  }
+
+  /* Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    to { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+  }
+
+  /* Marquee infinite scroll */
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Scroll indicator */
+  .animate-scroll-bounce {
+    animation: scroll-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(12px); opacity: 0.5; }
+  }
+
+  /* Badge moderne */
+  .badge-modern {
+    @apply inline-flex items-center rounded-full bg-gradient-to-r from-accent/10 to-gradient-end/10 px-4 py-1.5 text-xs font-bold text-accent border border-accent/20 backdrop-blur-sm;
+  }
+
+  /* Input moderne */
+  .input-modern {
+    @apply w-full rounded-2xl border-2 border-gray-200 bg-white/50 backdrop-blur-sm px-6 py-4 text-sm transition-all duration-300 focus:border-accent focus:ring-4 focus:ring-accent/20 focus:outline-none hover:border-accent/50;
+  }
+
+  /* Bento card */
+  .bento-card {
+    @apply relative overflow-hidden rounded-3xl border border-gray-200/60 bg-white p-8 transition-all duration-500 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-1;
+  }
+
+  /* Glass card dark */
+  .glass-card-dark {
+    @apply relative rounded-3xl bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] transition-all duration-500 hover:bg-white/[0.08] hover:border-white/[0.15];
+  }
+}

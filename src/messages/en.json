@@ -1,0 +1,234 @@
+{
+  "Metadata": {
+    "title": "Rotary Club Pattaya Marina",
+    "description": "Rotary Club Pattaya Marina in Thailand - Service Above Self, acting together for our community"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "Our Club",
+    "actions": "Our Actions",
+    "blog": "News",
+    "gallery": "Gallery",
+    "sponsors": "Sponsors",
+    "contact": "Contact",
+    "donate": "Donate",
+    "members": "Members Area",
+    "links": "Links"
+  },
+  "Header": {
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "Hero": {
+    "title": "Rotary Club Pattaya Marina",
+    "subtitle": "Service Above Self",
+    "description": "United by the will to serve, we act to improve the lives of communities in Pattaya and the surrounding region.",
+    "cta_join": "Join Us",
+    "cta_discover": "Discover Our Actions",
+    "badge_members": "Members",
+    "badge_years": "Years of Service",
+    "badge_location": "Pattaya",
+    "badge_country": "Thailand"
+  },
+  "Marquee": {
+    "row1": ["Service Above Self", "Rotary International", "District 3340", "Pattaya Marina", "Service", "Fellowship", "Integrity", "Diversity", "Leadership", "Community"],
+    "row2": ["Local Action", "Global Impact", "Education", "Health", "Environment", "Humanitarian", "Solidarity", "Engagement", "Volunteering", "Partnership"]
+  },
+  "Mission": {
+    "title": "Our Mission",
+    "subtitle": "Together, we make a difference",
+    "description": "Rotary Club Pattaya Marina brings together professionals and community leaders committed to humanitarian service. We act locally to create a lasting impact.",
+    "values": {
+      "service": {
+        "title": "Service",
+        "description": "We are committed to serving our community and beyond"
+      },
+      "fellowship": {
+        "title": "Fellowship",
+        "description": "We cultivate lasting bonds between our members"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We act with ethics and transparency"
+      },
+      "diversity": {
+        "title": "Diversity",
+        "description": "We celebrate the richness of our differences"
+      }
+    }
+  },
+  "Stats": {
+    "years": "Years of Service",
+    "members": "Active Members",
+    "projects": "Projects Completed",
+    "donated": "Baht Raised"
+  },
+  "RecentActions": {
+    "title": "Our Recent Actions",
+    "subtitle": "Discover our latest projects and initiatives",
+    "viewAll": "View all our actions",
+    "readMore": "Read more"
+  },
+  "Testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What our members say"
+  },
+  "CTA": {
+    "title": "Join Our Community",
+    "description": "Together, we can do even more. Whether you want to become a member or support our actions, every contribution matters.",
+    "join": "Become a Member",
+    "donate": "Make a Donation"
+  },
+  "About": {
+    "title": "Our Club",
+    "subtitle": "The only French-speaking Rotary in Asia",
+    "district": "District 3340 | Club 67334",
+    "history": {
+      "title": "Our History",
+      "content": "Rotary Club Pattaya Marina is the only French-speaking Rotary in Asia. A member of Rotary International District 3340, our club brings together professionals of diverse nationalities united by a common passion: serving the Pattaya community and its surroundings."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "We are committed to improving the lives of people in need in Pattaya and the surrounding region. Through education, health, community development, and humanitarian aid projects, we take concrete action for a better world."
+    },
+    "meetings": {
+      "title": "Our Meetings",
+      "day": "1st and 3rd Fridays of the month",
+      "time": "7:00 PM",
+      "place": "Siam Bayshore Resort",
+      "address": "559 Moo 10, Beach Road, Pattaya, ChonBuri 20150, Thailand",
+      "description": "Our monthly meetings are an opportunity to plan our actions, welcome guests, and strengthen the bonds of friendship between our members."
+    },
+    "leadership": {
+      "title": "Board 2024-2025",
+      "president": "President",
+      "pastPresident": "Past President",
+      "vicePresident": "Vice President",
+      "vicePresident2": "2nd Vice President",
+      "secretary": "Secretary & Foundation",
+      "treasurer": "Treasurer",
+      "protocolChief": "Protocol Chief"
+    },
+    "members": {
+      "title": "Active Members",
+      "honor": "Honorary Member"
+    },
+    "presidents": {
+      "title": "Past Presidents"
+    }
+  },
+  "Actions": {
+    "title": "Our Actions",
+    "subtitle": "Discover our charitable projects and initiatives",
+    "categories": {
+      "all": "All",
+      "education": "Education",
+      "health": "Health",
+      "community": "Community",
+      "environment": "Environment"
+    },
+    "readMore": "Read more",
+    "backToList": "Back to actions"
+  },
+  "Blog": {
+    "title": "News",
+    "subtitle": "Club life and latest news",
+    "readMore": "Read article",
+    "backToList": "Back to news",
+    "publishedOn": "Published on",
+    "by": "by"
+  },
+  "Gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Relive our highlights in pictures",
+    "photos": "photos",
+    "viewAlbum": "View album",
+    "backToGallery": "Back to gallery"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "subtitle": "We would love to hear from you",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "subject": "Subject",
+      "message": "Your message",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "title": "Information",
+      "address": "Address",
+      "email": "Email",
+      "phone": "Phone",
+      "meetings": "Meetings"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Email is not valid",
+      "subjectRequired": "Subject is required",
+      "messageRequired": "Message is required",
+      "messageMin": "Message must be at least 10 characters"
+    }
+  },
+  "Donate": {
+    "title": "Make a Donation",
+    "subtitle": "Your generosity changes lives",
+    "description": "Every donation, regardless of the amount, directly contributes to our charitable actions. 100% of your donations are used for our projects.",
+    "bankTransfer": {
+      "title": "Bank Transfer",
+      "bank": "Bank",
+      "account": "Account Number",
+      "name": "Account Name"
+    },
+    "otherWays": {
+      "title": "Other Ways",
+      "description": "You can also contact us directly to arrange your donation."
+    },
+    "taxDeduction": "Donations may be tax-deductible. Contact us for more information."
+  },
+  "Sponsors": {
+    "title": "Our Sponsors & Partners",
+    "subtitle": "Thank you to those who make our actions possible",
+    "become": "Become a Sponsor",
+    "becomeDescription": "Associate your business with actions that matter. Contact us to discover our partnership options."
+  },
+  "Links": {
+    "title": "Useful Links",
+    "subtitle": "Rotary International and our friends",
+    "rotaryIntl": "Rotary International",
+    "district": "District 3340",
+    "foundation": "Rotary Foundation",
+    "friends": "Friendly Clubs"
+  },
+  "Members": {
+    "title": "Members Area",
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Log in",
+      "forgot": "Forgot password?"
+    }
+  },
+  "Footer": {
+    "description": "Rotary Club Pattaya Marina - United in service since 2010. Member of District 3340, Rotary International.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved",
+    "serviceAboveSelf": "Service Above Self"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "backHome": "Back to home",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "share": "Share"
+  }
+}

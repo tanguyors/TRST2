@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F4FD"/>
+      <stop offset="100%" style="stop-color:#FDF6EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- School building -->
+  <rect x="250" y="180" width="300" height="200" fill="#003366" rx="8"/>
+  <rect x="270" y="200" width="60" height="50" fill="#87CEEB" rx="4"/>
+  <rect x="370" y="200" width="60" height="50" fill="#87CEEB" rx="4"/>
+  <rect x="470" y="200" width="60" height="50" fill="#87CEEB" rx="4"/>
+  <rect x="270" y="280" width="60" height="50" fill="#87CEEB" rx="4"/>
+  <rect x="470" y="280" width="60" height="50" fill="#87CEEB" rx="4"/>
+  <!-- Door -->
+  <rect x="370" y="290" width="60" height="90" fill="#F7A81B" rx="4"/>
+  <!-- Roof -->
+  <polygon points="230,180 400,100 570,180" fill="#002244"/>
+  <!-- Flag -->
+  <line x1="400" y1="100" x2="400" y2="60" stroke="#666" stroke-width="3"/>
+  <rect x="400" y="60" width="40" height="25" fill="#F7A81B" rx="2"/>
+  <!-- Children silhouettes -->
+  <circle cx="180" cy="360" r="15" fill="#003366" opacity="0.5"/>
+  <rect x="172" y="375" width="16" height="30" fill="#003366" opacity="0.5" rx="4"/>
+  <circle cx="210" cy="365" r="12" fill="#F7A81B" opacity="0.5"/>
+  <rect x="203" y="377" width="14" height="25" fill="#F7A81B" opacity="0.5" rx="4"/>
+  <circle cx="620" cy="358" r="15" fill="#003366" opacity="0.5"/>
+  <rect x="612" y="373" width="16" height="30" fill="#003366" opacity="0.5" rx="4"/>
+  <circle cx="650" cy="362" r="12" fill="#F7A81B" opacity="0.5"/>
+  <rect x="643" y="374" width="14" height="25" fill="#F7A81B" opacity="0.5" rx="4"/>
+  <!-- Ground -->
+  <rect x="0" y="380" width="800" height="120" fill="#10B981" opacity="0.2" rx="0"/>
+  <!-- Trees -->
+  <circle cx="120" cy="320" r="40" fill="#10B981" opacity="0.4"/>
+  <rect x="115" y="340" width="10" height="40" fill="#8B6914" opacity="0.4"/>
+  <circle cx="700" cy="310" r="50" fill="#10B981" opacity="0.3"/>
+  <rect x="695" y="340" width="10" height="40" fill="#8B6914" opacity="0.3"/>
+  <!-- Books -->
+  <rect x="350" y="430" width="30" height="8" fill="#003366" rx="1" transform="rotate(-5, 365, 434)"/>
+  <rect x="348" y="420" width="35" height="8" fill="#F7A81B" rx="1" transform="rotate(3, 365, 424)"/>
+  <rect x="352" y="410" width="28" height="8" fill="#E74C3C" rx="1" transform="rotate(-2, 366, 414)"/>
+</svg>

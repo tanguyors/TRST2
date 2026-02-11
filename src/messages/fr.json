@@ -1,0 +1,234 @@
+{
+  "Metadata": {
+    "title": "Rotary Club Pattaya Marina",
+    "description": "Le Rotary Club Pattaya Marina en Thaïlande - Servir d'abord, agir ensemble pour notre communauté"
+  },
+  "Nav": {
+    "home": "Accueil",
+    "about": "Notre Club",
+    "actions": "Nos Actions",
+    "blog": "Actualités",
+    "gallery": "Galerie",
+    "sponsors": "Sponsors",
+    "contact": "Contact",
+    "donate": "Faire un Don",
+    "members": "Espace Membres",
+    "links": "Liens"
+  },
+  "Header": {
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
+  },
+  "Hero": {
+    "title": "Rotary Club Pattaya Marina",
+    "subtitle": "Servir d'abord - Service Above Self",
+    "description": "Unis par la volonté de servir, nous agissons pour améliorer la vie des communautés de Pattaya et de la région.",
+    "cta_join": "Rejoignez-nous",
+    "cta_discover": "Découvrir nos actions",
+    "badge_members": "Membres",
+    "badge_years": "Ans de service",
+    "badge_location": "Pattaya",
+    "badge_country": "Thaïlande"
+  },
+  "Marquee": {
+    "row1": ["Service Above Self", "Rotary International", "District 3340", "Pattaya Marina", "Service", "Amitié", "Intégrité", "Diversité", "Leadership", "Communauté"],
+    "row2": ["Action Locale", "Impact Global", "Éducation", "Santé", "Environnement", "Humanitaire", "Solidarité", "Engagement", "Bénévolat", "Partenariat"]
+  },
+  "Mission": {
+    "title": "Notre Mission",
+    "subtitle": "Ensemble, nous faisons la différence",
+    "description": "Le Rotary Club Pattaya Marina rassemble des professionnels et des leaders de la communauté engagés dans le service humanitaire. Nous agissons localement pour créer un impact durable.",
+    "values": {
+      "service": {
+        "title": "Service",
+        "description": "Nous nous engageons à servir notre communauté et au-delà"
+      },
+      "fellowship": {
+        "title": "Amitié",
+        "description": "Nous cultivons des liens durables entre nos membres"
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Nous agissons avec éthique et transparence"
+      },
+      "diversity": {
+        "title": "Diversité",
+        "description": "Nous célébrons la richesse de nos différences"
+      }
+    }
+  },
+  "Stats": {
+    "years": "Années de service",
+    "members": "Membres actifs",
+    "projects": "Projets réalisés",
+    "donated": "Baht collectés"
+  },
+  "RecentActions": {
+    "title": "Nos Actions Récentes",
+    "subtitle": "Découvrez nos derniers projets et initiatives",
+    "viewAll": "Voir toutes nos actions",
+    "readMore": "Lire la suite"
+  },
+  "Testimonials": {
+    "title": "Témoignages",
+    "subtitle": "Ce que disent nos membres"
+  },
+  "CTA": {
+    "title": "Rejoignez notre communauté",
+    "description": "Ensemble, nous pouvons faire encore plus. Que vous souhaitiez devenir membre ou soutenir nos actions, chaque contribution compte.",
+    "join": "Devenir Membre",
+    "donate": "Faire un Don"
+  },
+  "About": {
+    "title": "Notre Club",
+    "subtitle": "Le seul Rotary Francophone d'Asie",
+    "district": "District 3340 | Club 67334",
+    "history": {
+      "title": "Notre Histoire",
+      "content": "Le Rotary Club Pattaya Marina est le seul Rotary Francophone d'Asie. Membre du District 3340 du Rotary International, notre club rassemble des professionnels de diverses nationalités unis par une passion commune : servir la communauté de Pattaya et ses environs."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "content": "Nous nous engageons à améliorer la vie des personnes dans le besoin à Pattaya et dans la région. À travers des projets d'éducation, de santé, de développement communautaire et d'aide humanitaire, nous agissons concrètement pour un monde meilleur."
+    },
+    "meetings": {
+      "title": "Nos Réunions",
+      "day": "1er et 3ème vendredis du mois",
+      "time": "19h00",
+      "place": "Siam Bayshore Resort",
+      "address": "559 Moo 10, Beach Road, Pattaya, ChonBuri 20150, Thaïlande",
+      "description": "Nos réunions mensuelles sont l'occasion de planifier nos actions, d'accueillir des invités et de renforcer les liens d'amitié entre nos membres."
+    },
+    "leadership": {
+      "title": "Bureau 2024-2025",
+      "president": "Président",
+      "pastPresident": "Président sortant",
+      "vicePresident": "Vice-Président",
+      "vicePresident2": "2ème Vice-Présidente",
+      "secretary": "Secrétaire & Fondation",
+      "treasurer": "Trésorier",
+      "protocolChief": "Chef de protocole"
+    },
+    "members": {
+      "title": "Membres Actifs",
+      "honor": "Membre d'Honneur"
+    },
+    "presidents": {
+      "title": "Historique des Présidents"
+    }
+  },
+  "Actions": {
+    "title": "Nos Actions",
+    "subtitle": "Découvrez nos projets et initiatives caritatives",
+    "categories": {
+      "all": "Toutes",
+      "education": "Éducation",
+      "health": "Santé",
+      "community": "Communauté",
+      "environment": "Environnement"
+    },
+    "readMore": "Lire la suite",
+    "backToList": "Retour aux actions"
+  },
+  "Blog": {
+    "title": "Actualités",
+    "subtitle": "Vie du club et dernières nouvelles",
+    "readMore": "Lire l'article",
+    "backToList": "Retour aux actualités",
+    "publishedOn": "Publié le",
+    "by": "par"
+  },
+  "Gallery": {
+    "title": "Galerie Photos",
+    "subtitle": "Revivez nos moments forts en images",
+    "photos": "photos",
+    "viewAlbum": "Voir l'album",
+    "backToGallery": "Retour à la galerie"
+  },
+  "Contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous serions ravis d'échanger avec vous",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "subject": "Sujet",
+      "message": "Votre message",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Informations",
+      "address": "Adresse",
+      "email": "Email",
+      "phone": "Téléphone",
+      "meetings": "Réunions"
+    },
+    "validation": {
+      "nameRequired": "Le nom est requis",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "L'email n'est pas valide",
+      "subjectRequired": "Le sujet est requis",
+      "messageRequired": "Le message est requis",
+      "messageMin": "Le message doit contenir au moins 10 caractères"
+    }
+  },
+  "Donate": {
+    "title": "Faire un Don",
+    "subtitle": "Votre générosité change des vies",
+    "description": "Chaque don, quel que soit son montant, contribue directement à nos actions caritatives. 100% de vos dons sont utilisés pour nos projets.",
+    "bankTransfer": {
+      "title": "Virement Bancaire",
+      "bank": "Banque",
+      "account": "Numéro de compte",
+      "name": "Nom du compte"
+    },
+    "otherWays": {
+      "title": "Autres Moyens",
+      "description": "Vous pouvez également nous contacter directement pour organiser votre don."
+    },
+    "taxDeduction": "Les dons peuvent être déductibles des impôts. Contactez-nous pour plus d'informations."
+  },
+  "Sponsors": {
+    "title": "Nos Sponsors & Partenaires",
+    "subtitle": "Merci à ceux qui rendent nos actions possibles",
+    "become": "Devenir Sponsor",
+    "becomeDescription": "Associez votre entreprise à des actions qui comptent. Contactez-nous pour découvrir nos formules de partenariat."
+  },
+  "Links": {
+    "title": "Liens Utiles",
+    "subtitle": "Le Rotary International et nos amis",
+    "rotaryIntl": "Rotary International",
+    "district": "District 3340",
+    "foundation": "Fondation Rotary",
+    "friends": "Clubs Amis"
+  },
+  "Members": {
+    "title": "Espace Membres",
+    "login": {
+      "title": "Connexion",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "forgot": "Mot de passe oublié ?"
+    }
+  },
+  "Footer": {
+    "description": "Le Rotary Club Pattaya Marina - Unis dans le service depuis 2010. Membre du District 3340, Rotary International.",
+    "quickLinks": "Liens Rapides",
+    "contact": "Contact",
+    "followUs": "Suivez-nous",
+    "rights": "Tous droits réservés",
+    "serviceAboveSelf": "Service Above Self"
+  },
+  "Common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "notFound": "Page non trouvée",
+    "backHome": "Retour à l'accueil",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tout",
+    "share": "Partager"
+  }
+}

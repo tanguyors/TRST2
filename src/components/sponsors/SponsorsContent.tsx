@@ -63,7 +63,14 @@ const categoryIcons = {
 };
 
 export function SponsorsContent() {
-  const t = useTranslations('Sponsors');
+  const tSponsors = useTranslations('Sponsors');
+  const tHero = useTranslations('Sponsors.hero');
+  const tImpact = useTranslations('Sponsors.impact');
+  const tRotary = useTranslations('Sponsors.rotarySection');
+  const tGallery = useTranslations('Sponsors.gallery');
+  const tWhyPartner = useTranslations('Sponsors.whyPartner');
+  const tPartnershipTypes = useTranslations('Sponsors.partnershipTypes');
+  const tCta = useTranslations('Sponsors.cta');
 
   return (
     <>
@@ -105,7 +112,7 @@ export function SponsorsContent() {
             className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-accent mb-6"
           >
             <Sparkles className="w-4 h-4" />
-            {sponsors.length} Partenaires
+            {sponsors.length} {tHero('badge')}
           </motion.div>
 
           <motion.h1
@@ -115,7 +122,7 @@ export function SponsorsContent() {
             className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Nos Mécènes & Partenaires
+            {tHero('title')}
           </motion.h1>
 
           <motion.p
@@ -124,7 +131,7 @@ export function SponsorsContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/60 mb-8 max-w-2xl mx-auto"
           >
-            Des partenaires engagés qui nous aident à réaliser nos projets humanitaires et communautaires
+            {tHero('subtitle')}
           </motion.p>
         </div>
 
@@ -138,20 +145,20 @@ export function SponsorsContent() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-                L'Impact de Nos Partenariats
+                {tImpact('title')}
               </h2>
               <p className="text-lg text-text-light max-w-2xl mx-auto">
-                Grâce au soutien de nos partenaires, nous réalisons des projets concrets qui changent des vies
+                {tImpact('subtitle')}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '15+', label: 'Projets Financés', icon: Target, color: 'from-blue-500 to-blue-600' },
-              { number: '5', label: 'Partenaires Actifs', icon: Handshake, color: 'from-accent to-accent/80' },
-              { number: '1000+', label: 'Bénéficiaires', icon: Users, color: 'from-secondary to-secondary/80' },
-              { number: '10+', label: 'Années de Collaboration', icon: Award, color: 'from-primary to-primary/80' },
+              { number: '15+', label: tImpact('projectsFunded'), icon: Target, color: 'from-blue-500 to-blue-600' },
+              { number: '5', label: tImpact('activePartners'), icon: Handshake, color: 'from-accent to-accent/80' },
+              { number: '1000+', label: tImpact('beneficiaries'), icon: Users, color: 'from-secondary to-secondary/80' },
+              { number: '10+', label: tImpact('yearsCollaboration'), icon: Award, color: 'from-primary to-primary/80' },
             ].map((stat, index) => (
               <ScrollReveal key={stat.label} delay={index * 0.1}>
                 <motion.div
@@ -231,7 +238,7 @@ export function SponsorsContent() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 text-accent font-bold hover:gap-4 transition-all"
                         >
-                          <span>Visiter le site</span>
+                          <span>{tSponsors('visitWebsite')}</span>
                           <ExternalLink className="w-4 h-4" />
                         </a>
                       )}
@@ -256,13 +263,13 @@ export function SponsorsContent() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/5 border border-primary/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
-                Réseau Rotary
+                {tRotary('badge')}
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                Nos Partenaires Rotary
+                {tRotary('title')}
               </h2>
               <p className="text-xl text-text-light max-w-2xl mx-auto">
-                Nous collaborons avec des clubs Rotary du monde entier pour amplifier notre impact humanitaire
+                {tRotary('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -270,20 +277,20 @@ export function SponsorsContent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'District 3340',
-                description: 'Notre district en Thaïlande',
+                title: tRotary('district.title'),
+                description: tRotary('district.description'),
                 icon: Globe,
                 link: 'https://www.rotary3340.org'
               },
               {
-                title: 'Rotary International',
-                description: 'Organisation mondiale',
+                title: tRotary('international.title'),
+                description: tRotary('international.description'),
                 icon: Handshake,
                 link: 'https://www.rotary.org'
               },
               {
-                title: 'Clubs Partenaires',
-                description: 'Collaboration internationale',
+                title: tRotary('clubs.title'),
+                description: tRotary('clubs.description'),
                 icon: Heart,
                 link: '#'
               },
@@ -305,7 +312,7 @@ export function SponsorsContent() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-accent font-bold hover:gap-4 transition-all"
                     >
-                      <span>En savoir plus</span>
+                      <span>{tRotary('learnMore')}</span>
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   )}
@@ -323,13 +330,13 @@ export function SponsorsContent() {
             <div className="text-center mb-8 md:mb-12 lg:mb-16">
               <div className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.2em] text-accent mb-3 md:mb-4">
                 <Sparkles className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="hidden xs:inline">Nos Collaborations</span>
+                <span className="hidden xs:inline">{tGallery('badge')}</span>
               </div>
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-text-dark mb-4 md:mb-6 px-2" style={{ fontFamily: 'var(--font-heading)' }}>
-                Partenariats en Action
+                {tGallery('title')}
               </h2>
               <p className="text-sm md:text-lg lg:text-xl text-text-light max-w-2xl mx-auto px-4">
-                Découvrez les projets réalisés grâce à la collaboration avec nos partenaires
+                {tGallery('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -338,21 +345,21 @@ export function SponsorsContent() {
             {[
               {
                 image: '/images/actions/filtre-eau-karen.jpg',
-                title: 'Distribution d\'Eau Potable',
-                partner: 'Rotary E-Club District 9220',
-                description: 'Installation de systèmes de filtration dans les villages Karen'
+                title: tGallery('projects.waterDistribution.title'),
+                partner: tGallery('projects.waterDistribution.partner'),
+                description: tGallery('projects.waterDistribution.description')
               },
               {
                 image: '/images/actions/donation-hhn-2016.jpg',
-                title: 'Tournoi de Pétanque',
-                partner: 'Big C Extra',
-                description: 'Événement caritatif au profit de Human Help Network'
+                title: tGallery('projects.petanqueTournament.title'),
+                partner: tGallery('projects.petanqueTournament.partner'),
+                description: tGallery('projects.petanqueTournament.description')
               },
               {
                 image: '/images/actions/electricite-mae-song-noi.jpg',
-                title: 'Électrification Rurale',
-                partner: 'Rotary Club Bruxelles Erasme',
-                description: 'Projet d\'électricité à Mae Song Noi'
+                title: tGallery('projects.ruralElectrification.title'),
+                partner: tGallery('projects.ruralElectrification.partner'),
+                description: tGallery('projects.ruralElectrification.description')
               },
             ].map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 0.1}>
@@ -393,13 +400,13 @@ export function SponsorsContent() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
                 <Lightbulb className="w-4 h-4" />
-                Avantages
+                {tWhyPartner('badge')}
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                Pourquoi Devenir Partenaire ?
+                {tWhyPartner('title')}
               </h2>
               <p className="text-xl text-text-light max-w-3xl mx-auto">
-                En vous associant au Rotary Club Pattaya Marina, vous contribuez à des projets humanitaires tout en renforçant votre engagement RSE
+                {tWhyPartner('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -408,38 +415,38 @@ export function SponsorsContent() {
             {[
               {
                 icon: Heart,
-                title: 'Impact Social Mesurable',
-                description: 'Participez à des projets concrets avec des résultats tangibles et un suivi transparent de l\'utilisation des fonds.',
+                title: tWhyPartner('benefits.socialImpact.title'),
+                description: tWhyPartner('benefits.socialImpact.description'),
                 color: 'from-red-500 to-pink-500'
               },
               {
                 icon: Globe,
-                title: 'Visibilité Internationale',
-                description: 'Profitez d\'une visibilité auprès du réseau Rotary International présent dans 200 pays avec 1,4 million de membres.',
+                title: tWhyPartner('benefits.internationalVisibility.title'),
+                description: tWhyPartner('benefits.internationalVisibility.description'),
                 color: 'from-blue-500 to-cyan-500'
               },
               {
                 icon: Handshake,
-                title: 'Réseau Professionnel',
-                description: 'Intégrez un réseau de professionnels engagés et développez des relations d\'affaires durables.',
+                title: tWhyPartner('benefits.professionalNetwork.title'),
+                description: tWhyPartner('benefits.professionalNetwork.description'),
                 color: 'from-primary to-accent'
               },
               {
                 icon: Award,
-                title: 'Reconnaissance Publique',
-                description: 'Votre logo et votre contribution sont mis en avant sur notre site web et nos communications.',
+                title: tWhyPartner('benefits.publicRecognition.title'),
+                description: tWhyPartner('benefits.publicRecognition.description'),
                 color: 'from-yellow-500 to-orange-500'
               },
               {
                 icon: TrendingUp,
-                title: 'Développement RSE',
-                description: 'Renforcez votre politique de responsabilité sociétale d\'entreprise avec des actions concrètes.',
+                title: tWhyPartner('benefits.csrDevelopment.title'),
+                description: tWhyPartner('benefits.csrDevelopment.description'),
                 color: 'from-green-500 to-emerald-500'
               },
               {
                 icon: Target,
-                title: 'Projets Ciblés',
-                description: 'Choisissez les causes qui vous tiennent à cœur : santé, éducation, environnement, développement local.',
+                title: tWhyPartner('benefits.targetedProjects.title'),
+                description: tWhyPartner('benefits.targetedProjects.description'),
                 color: 'from-purple-500 to-indigo-500'
               },
             ].map((benefit, index) => (
@@ -470,10 +477,10 @@ export function SponsorsContent() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                Types de Partenariats
+                {tPartnershipTypes('title')}
               </h2>
               <p className="text-xl text-text-light max-w-2xl mx-auto">
-                Différentes façons de nous soutenir selon vos objectifs et vos moyens
+                {tPartnershipTypes('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -481,35 +488,35 @@ export function SponsorsContent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                title: 'Partenaire Financier',
-                description: 'Contribution financière pour soutenir nos projets humanitaires et événements caritatifs.',
+                title: tPartnershipTypes('financial.title'),
+                description: tPartnershipTypes('financial.description'),
                 features: [
-                  'Soutien ponctuel ou récurrent',
-                  'Logo sur nos supports',
-                  'Rapport d\'impact annuel',
-                  'Invitation aux événements'
+                  tPartnershipTypes('financial.features.0'),
+                  tPartnershipTypes('financial.features.1'),
+                  tPartnershipTypes('financial.features.2'),
+                  tPartnershipTypes('financial.features.3')
                 ],
                 gradient: 'from-primary to-primary/80'
               },
               {
-                title: 'Partenaire en Nature',
-                description: 'Don de produits, services ou compétences pour nos actions sur le terrain.',
+                title: tPartnershipTypes('inKind.title'),
+                description: tPartnershipTypes('inKind.description'),
                 features: [
-                  'Fourniture de matériel',
-                  'Mise à disposition de services',
-                  'Expertise technique',
-                  'Reconnaissance publique'
+                  tPartnershipTypes('inKind.features.0'),
+                  tPartnershipTypes('inKind.features.1'),
+                  tPartnershipTypes('inKind.features.2'),
+                  tPartnershipTypes('inKind.features.3')
                 ],
                 gradient: 'from-accent to-accent/80'
               },
               {
-                title: 'Partenaire Stratégique',
-                description: 'Collaboration à long terme avec co-développement de projets spécifiques.',
+                title: tPartnershipTypes('strategic.title'),
+                description: tPartnershipTypes('strategic.description'),
                 features: [
-                  'Partenariat pluriannuel',
-                  'Co-création de projets',
-                  'Visibilité maximale',
-                  'Gouvernance partagée'
+                  tPartnershipTypes('strategic.features.0'),
+                  tPartnershipTypes('strategic.features.1'),
+                  tPartnershipTypes('strategic.features.2'),
+                  tPartnershipTypes('strategic.features.3')
                 ],
                 gradient: 'from-secondary to-secondary/80'
               },
@@ -556,13 +563,13 @@ export function SponsorsContent() {
               >
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white mb-6">
                   <Handshake className="w-4 h-4" />
-                  Devenez Partenaire
+                  {tCta('badge')}
                 </div>
                 <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                  Rejoignez Nos Partenaires
+                  {tCta('title')}
                 </h2>
                 <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                  Votre entreprise souhaite s'associer à nos projets humanitaires? Contactez-nous pour découvrir comment nous pouvons collaborer.
+                  {tCta('description')}
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
@@ -570,13 +577,13 @@ export function SponsorsContent() {
                     className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-primary font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl"
                   >
                     <Heart className="w-5 h-5" />
-                    Nous Contacter
+                    {tCta('contact')}
                   </Link>
                   <Link
                     href="/donate"
                     className="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-md px-8 py-4 text-white font-bold text-lg hover:bg-white/20 transition-all duration-300"
                   >
-                    Faire un Don
+                    {tCta('donate')}
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </div>

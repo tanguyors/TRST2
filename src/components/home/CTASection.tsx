@@ -7,15 +7,15 @@ import { motion } from 'framer-motion';
 import { Heart, Users, ArrowRight, Calendar, FolderHeart, Globe } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/constants';
 
-const trustItems = [
-  { Icon: Calendar, value: `${new Date().getFullYear() - SITE_CONFIG.foundedYear}+`, label: 'ans' },
-  { Icon: Users, value: '35+', label: 'membres' },
-  { Icon: FolderHeart, value: '150+', label: 'projets' },
-  { Icon: Globe, value: '1er', label: 'Rotary FR d\'Asie' },
-];
-
 export function CTASection() {
   const t = useTranslations('CTA');
+
+  const trustItems = [
+    { Icon: Calendar, value: `${new Date().getFullYear() - SITE_CONFIG.foundedYear}+`, label: t('years') },
+    { Icon: Users, value: '35+', label: t('members') },
+    { Icon: FolderHeart, value: '150+', label: t('projects') },
+    { Icon: Globe, value: '1er', label: t('rotaryFrAsia') },
+  ];
 
   return (
     <section className="relative py-32 md:py-40 lg:py-48 overflow-hidden bg-primary">

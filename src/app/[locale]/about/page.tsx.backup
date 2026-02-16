@@ -22,13 +22,6 @@ type Member = {
 function AboutContent() {
   const t = useTranslations('About');
   const tMission = useTranslations('Mission');
-  const tStats = useTranslations('About.stats');
-  const tHero = useTranslations('About.hero');
-  const tValues = useTranslations('About.values');
-  const tImpact = useTranslations('About.impact');
-  const tJoin = useTranslations('About.join');
-  const tGallery = useTranslations('About.photoGallery');
-  const tRotary = useTranslations('About.rotaryInfo');
   const yearsOfService = new Date().getFullYear() - SITE_CONFIG.foundedYear;
 
   const bureau: Member[] = [
@@ -127,10 +120,10 @@ function AboutContent() {
   ];
 
   const stats = [
-    { value: '150+', label: tStats('projectsCompleted'), icon: CheckCircle2 },
-    { value: '5M+', label: tStats('bathCollected'), icon: TrendingUp },
-    { value: '35+', label: tStats('activeMembers'), icon: Users },
-    { value: yearsOfService + '+', label: tStats('yearsOfService'), icon: Calendar },
+    { value: '150+', label: 'Projets Réalisés', icon: CheckCircle2 },
+    { value: '5M+', label: 'Baht Collectés', icon: TrendingUp },
+    { value: '35+', label: 'Membres Actifs', icon: Users },
+    { value: yearsOfService + '+', label: 'Années de Service', icon: Calendar },
   ];
 
   return (
@@ -205,21 +198,21 @@ function AboutContent() {
               <Calendar className="w-5 h-5 text-accent" />
               <div className="text-left">
                 <p className="text-2xl font-black text-white">{yearsOfService}+</p>
-                <p className="text-xs text-white/40 uppercase tracking-wider">{tHero('years')}</p>
+                <p className="text-xs text-white/40 uppercase tracking-wider">Ans</p>
               </div>
             </div>
             <div className="glass-card-dark px-6 py-4 flex items-center gap-3">
               <Users className="w-5 h-5 text-secondary" />
               <div className="text-left">
                 <p className="text-2xl font-black text-white">35+</p>
-                <p className="text-xs text-white/40 uppercase tracking-wider">{tHero('members')}</p>
+                <p className="text-xs text-white/40 uppercase tracking-wider">Membres</p>
               </div>
             </div>
             <div className="glass-card-dark px-6 py-4 flex items-center gap-3">
               <Globe className="w-5 h-5 text-gradient-end" />
               <div className="text-left">
                 <p className="text-lg font-bold text-white">District 3340</p>
-                <p className="text-xs text-white/40 uppercase tracking-wider">{tHero('district')}</p>
+                <p className="text-xs text-white/40 uppercase tracking-wider">Rotary International</p>
               </div>
             </div>
           </motion.div>
@@ -250,7 +243,7 @@ function AboutContent() {
                       {t('history.content')}
                     </p>
                     <p className="text-text-light leading-relaxed">
-                      {t('history.extendedContent').replace('{year}', SITE_CONFIG.foundedYear.toString())}
+                      Depuis notre création en {SITE_CONFIG.foundedYear}, nous avons touché des milliers de vies à travers nos projets d'éducation, de santé et de développement communautaire. Notre engagement envers le service humanitaire reste aussi fort aujourd'hui qu'à nos débuts.
                     </p>
                   </div>
                 </div>
@@ -274,7 +267,7 @@ function AboutContent() {
                       {t('mission.content')}
                     </p>
                     <p className="text-text-light leading-relaxed">
-                      {t('mission.priorityAreas')}
+                      Nos domaines d'action prioritaires incluent l'éducation des jeunes, l'accès aux soins de santé, le soutien aux communautés défavorisées et la promotion du développement durable. Chaque projet est choisi pour maximiser son impact positif sur notre communauté.
                     </p>
                   </div>
                 </div>
@@ -282,18 +275,15 @@ function AboutContent() {
             </ScrollReveal>
           </div>
 
-          {/* {tValues('badge')} */}
+          {/* Nos Valeurs */}
           <div className="text-center mb-12">
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/5 border border-primary/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
-                {tValues('badge')}
+                Nos Valeurs
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-text-dark" style={{ fontFamily: 'var(--font-heading)' }}>
-                {tValues('title')}
+                Ce Qui Nous Guide
               </h2>
-              <p className="text-xl text-text-light max-w-3xl mx-auto">
-                {tValues('subtitle')}
-              </p>
             </ScrollReveal>
           </div>
 
@@ -328,13 +318,13 @@ function AboutContent() {
           <div className="text-center mb-16">
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
-                {tImpact('badge')}
+                Notre Impact
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                {tImpact('title')}
+                Des Chiffres Qui Parlent
               </h2>
               <p className="text-xl text-white/60 max-w-2xl mx-auto">
-                {tImpact('subtitle')}
+                Depuis notre création, nous avons réalisé des projets concrets qui ont changé des vies. Voici quelques-unes de nos réalisations.
               </p>
             </ScrollReveal>
           </div>
@@ -381,7 +371,7 @@ function AboutContent() {
                   <div className="flex items-center gap-4 p-4 rounded-2xl bg-warm-beige">
                     <Calendar className="h-6 w-6 text-primary shrink-0" />
                     <div>
-                      <p className="text-sm text-text-light mb-1">{t('meetings.when')}</p>
+                      <p className="text-sm text-text-light mb-1">Quand</p>
                       <p className="text-text-dark font-bold">{t('meetings.day')}</p>
                       <p className="text-text-dark font-bold">{t('meetings.time')}</p>
                     </div>
@@ -389,7 +379,7 @@ function AboutContent() {
                   <div className="flex items-start gap-4 p-4 rounded-2xl bg-warm-beige">
                     <MapPin className="h-6 w-6 text-primary shrink-0 mt-1" />
                     <div>
-                      <p className="text-sm text-text-light mb-1">{t('meetings.where')}</p>
+                      <p className="text-sm text-text-light mb-1">Où</p>
                       <p className="text-text-dark font-bold">{t('meetings.place')}</p>
                       <p className="text-sm text-text-light mt-1">{t('meetings.address')}</p>
                     </div>
@@ -397,7 +387,7 @@ function AboutContent() {
                 </div>
                 <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-accent/5 to-secondary/5 border border-accent/10">
                   <p className="text-text-dark font-medium">
-                    {t('meetings.visitorsWelcome')}
+                    <strong>Les visiteurs sont les bienvenus!</strong> Si vous souhaitez assister à une de nos réunions pour découvrir le Rotary, n'hésitez pas à nous contacter à l'avance.
                   </p>
                 </div>
               </div>
@@ -416,13 +406,13 @@ function AboutContent() {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 rounded-full bg-accent/5 border border-accent/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4"
             >
-              {t('leadership.badge')}
+              Leadership
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
               {t('leadership.title')}
             </h2>
             <p className="text-xl text-text-light max-w-2xl mx-auto">
-              {t('leadership.subtitle')}
+              Notre équipe de direction dévouée guide le club vers l'excellence dans le service communautaire
             </p>
           </div>
 
@@ -474,13 +464,13 @@ function AboutContent() {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4"
             >
-              {t('presidents.badge')}
+              Heritage
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
               {t('presidents.title')}
             </h2>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              {t('presidents.subtitle')}
+              Une succession de leaders dévoués qui ont façonné notre club au fil des années
             </p>
           </div>
 
@@ -522,7 +512,7 @@ function AboutContent() {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 rounded-full bg-secondary/10 border border-secondary/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-4"
             >
-              {t('members.badge')}
+              Community
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-black text-text-dark" style={{ fontFamily: 'var(--font-heading)' }}>
               {t('members.title')}
@@ -594,46 +584,39 @@ function AboutContent() {
           <div className="text-center mb-16">
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/5 border border-primary/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
-                {tJoin('badge')}
+                Rejoignez-Nous
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                {tJoin('title')}
+                Devenez Membre du Club
               </h2>
               <p className="text-xl text-text-light max-w-2xl mx-auto">
-                {tJoin('subtitle')}
+                Vous partagez nos valeurs et souhaitez vous engager dans le service communautaire? Rejoignez notre famille Rotarienne!
               </p>
             </ScrollReveal>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {(() => {
-                const steps = [
-                  {
-                    step: '1',
-                    title: 'Contactez-Nous',
-                    description: 'Prenez contact avec nous par email ou téléphone pour manifester votre intérêt',
-                    icon: Mail
-                  },
-                  {
-                    step: '2',
-                    title: 'Assistez à une Réunion',
-                    description: 'Venez découvrir notre club lors d'une de nos réunions mensuelles',
-                    icon: UserPlus
-                  },
-                  {
-                    step: '3',
-                    title: 'Rejoignez l'Équipe',
-                    description: 'Après votre parrainage, devenez membre actif et participez à nos projets',
-                    icon: CheckCircle2
-                  },
-                ];
-                return [0, 1, 2].map((index) => ({
-                  ...steps[index],
-                  title: tJoin(`steps.${index}.title`),
-                  description: tJoin(`steps.${index}.description`)
-                }));
-              })().map((item, index) =>
+              {[
+                {
+                  step: '1',
+                  title: 'Contactez-Nous',
+                  description: 'Prenez contact avec nous par email ou téléphone pour manifester votre intérêt',
+                  icon: Mail
+                },
+                {
+                  step: '2',
+                  title: 'Assistez à une Réunion',
+                  description: 'Venez découvrir notre club lors d\'une de nos réunions mensuelles',
+                  icon: UserPlus
+                },
+                {
+                  step: '3',
+                  title: 'Rejoignez l\'Équipe',
+                  description: 'Après votre parrainage, devenez membre actif et participez à nos projets',
+                  icon: CheckCircle2
+                },
+              ].map((item, index) => (
                 <ScrollReveal key={item.step} delay={index * 0.1}>
                   <motion.div
                     whileHover={{ y: -8 }}
@@ -654,9 +637,9 @@ function AboutContent() {
 
             <ScrollReveal>
               <div className="bg-gradient-to-br from-primary to-primary/90 rounded-3xl p-8 md:p-12 text-center text-white">
-                <h3 className="text-3xl font-black mb-4">{tJoin('ctaTitle')}</h3>
+                <h3 className="text-3xl font-black mb-4">Prêt à Faire la Différence?</h3>
                 <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-                  {tJoin('ctaDescription')}
+                  Contactez-nous dès aujourd'hui pour en savoir plus sur les opportunités de membership
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
@@ -664,14 +647,14 @@ function AboutContent() {
                     className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-primary font-bold hover:scale-105 transition-transform duration-300"
                   >
                     <Mail className="w-5 h-5" />
-                    {tJoin('contactButton')}
+                    Nous Contacter
                   </Link>
                   <a
                     href="tel:+66123456789"
                     className="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-md px-8 py-4 text-white font-bold hover:bg-white/20 transition-all duration-300"
                   >
                     <Phone className="w-5 h-5" />
-                    {tJoin('callButton')}
+                    Appelez-Nous
                   </a>
                 </div>
               </div>
@@ -680,7 +663,7 @@ function AboutContent() {
         </div>
       </section>
 
-      {/* {tGallery('title')} - Photo Gallery */}
+      {/* Notre Club en Action - Photo Gallery */}
       <section className="py-24 md:py-32 bg-gradient-to-br from-white via-warm-beige to-warm-gray relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-5">
@@ -693,57 +676,50 @@ function AboutContent() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6">
                 <Sparkles className="w-4 h-4" />
-                {tGallery('badge')}
+                Galerie Photos
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                {tGallery('title')}
+                Notre Club en Action
               </h2>
               <p className="text-xl text-text-light max-w-3xl mx-auto">
-                {tGallery('subtitle')}
+                Découvrez nos activités à Pattaya et dans la région à travers ces moments capturés
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(() => {
-              const photos = [
-                {
-                  src: '/images/about/installation-2025.jpg',
-                  title: 'Installation du Bureau 2025',
-                  description: 'Cérémonie d'installation officielle de notre nouveau bureau'
-                },
-                {
-                  src: '/images/about/ywca-donation.jpg',
-                  title: 'Don à la YWCA',
-                  description: 'Remise d'un don de 130,000 baht à la YWCA de Pattaya'
-                },
-                {
-                  src: '/images/about/prison-donation.jpg',
-                  title: 'Soutien aux Prisons',
-                  description: 'Distribution de fournitures essentielles aux détenus'
-                },
-                {
-                  src: '/images/about/women-day.jpg',
-                  title: 'Journée de la Femme',
-                  description: 'Célébration de la Journée Internationale des Femmes'
-                },
-                {
-                  src: '/images/about/singapore-convention.jpg',
-                  title: 'Convention de Singapore',
-                  description: 'Participation à la convention régionale du Rotary'
-                },
-                {
-                  src: '/images/about/anniversary.jpg',
-                  title: 'Anniversaire du Club',
-                  description: 'Célébration de l'anniversaire du club avec nos membres'
-                }
-              ];
-              return [0, 1, 2, 3, 4, 5].map((index) => ({
-                ...photos[index],
-                title: tGallery(`photos.${index}.title`),
-                description: tGallery(`photos.${index}.description`)
-              }));
-            })().map((photo, index) =>
+            {[
+              {
+                src: '/images/about/installation-2025.jpg',
+                title: 'Installation du Bureau 2025',
+                description: 'Cérémonie d\'installation officielle de notre nouveau bureau'
+              },
+              {
+                src: '/images/about/ywca-donation.jpg',
+                title: 'Don à la YWCA',
+                description: 'Remise d\'un don de 130,000 baht à la YWCA de Pattaya'
+              },
+              {
+                src: '/images/about/prison-donation.jpg',
+                title: 'Soutien aux Prisons',
+                description: 'Distribution de fournitures essentielles aux détenus'
+              },
+              {
+                src: '/images/about/women-day.jpg',
+                title: 'Journée de la Femme',
+                description: 'Célébration de la Journée Internationale des Femmes'
+              },
+              {
+                src: '/images/about/singapore-convention.jpg',
+                title: 'Convention de Singapore',
+                description: 'Participation à la convention régionale du Rotary'
+              },
+              {
+                src: '/images/about/anniversary.jpg',
+                title: 'Anniversaire du Club',
+                description: 'Célébration de l\'anniversaire du club avec nos membres'
+              }
+            ].map((photo, index) => (
               <ScrollReveal key={photo.title} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -12, scale: 1.02 }}
@@ -784,10 +760,10 @@ function AboutContent() {
             <div className="mt-16 text-center">
               <div className="inline-block bg-white rounded-3xl px-8 py-6 shadow-xl">
                 <p className="text-text-light mb-2">
-                  <span className="font-bold text-accent">{tGallery('projectsCallout')}</span> réalisés depuis notre création
+                  <span className="font-bold text-accent">Plus de 150 projets</span> réalisés depuis notre création
                 </p>
                 <p className="text-sm text-text-light/60">
-                  {tGallery('discoverActions')}
+                  Découvrez toutes nos actions sur la page Actions
                 </p>
               </div>
             </div>
@@ -807,10 +783,10 @@ function AboutContent() {
                   </div>
                   <div>
                     <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-                      {tRotary('title')}
+                      Membre du Rotary International
                     </h2>
                     <p className="text-text-light leading-relaxed text-lg">
-                      {tRotary('description')}
+                      Le Rotary International rassemble plus de 1,4 million de membres dans plus de 200 pays et régions. Ensemble, nous formons un réseau mondial de leaders communautaires dédiés à résoudre les problèmes les plus pressants de notre époque.
                     </p>
                   </div>
                 </div>
@@ -819,13 +795,13 @@ function AboutContent() {
                   <div className="p-6 rounded-2xl bg-warm-beige">
                     <h4 className="font-bold text-text-dark mb-2">District 3340</h4>
                     <p className="text-text-light text-sm">
-                      {tRotary('districtInfo')}
+                      Notre club fait partie du District 3340 qui couvre la Thaïlande et regroupe de nombreux clubs Rotary dans la région.
                     </p>
                   </div>
                   <div className="p-6 rounded-2xl bg-warm-beige">
                     <h4 className="font-bold text-text-dark mb-2">Club 67334</h4>
                     <p className="text-text-light text-sm">
-                      {tRotary('clubInfo')}
+                      Identifiant unique de notre club au sein du réseau mondial Rotary International.
                     </p>
                   </div>
                 </div>
@@ -837,7 +813,7 @@ function AboutContent() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-accent hover:text-accent-light font-bold transition-colors"
                   >
-                    {tRotary('learnMore')}
+                    En savoir plus sur le Rotary International
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </div>

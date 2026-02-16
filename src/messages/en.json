@@ -31,8 +31,30 @@
     "badge_country": "Thailand"
   },
   "Marquee": {
-    "row1": ["Service Above Self", "Rotary International", "District 3340", "Pattaya Marina", "Service", "Fellowship", "Integrity", "Diversity", "Leadership", "Community"],
-    "row2": ["Local Action", "Global Impact", "Education", "Health", "Environment", "Humanitarian", "Solidarity", "Engagement", "Volunteering", "Partnership"]
+    "row1": [
+      "Service Above Self",
+      "Rotary International",
+      "District 3340",
+      "Pattaya Marina",
+      "Service",
+      "Fellowship",
+      "Integrity",
+      "Diversity",
+      "Leadership",
+      "Community"
+    ],
+    "row2": [
+      "Local Action",
+      "Global Impact",
+      "Education",
+      "Health",
+      "Environment",
+      "Humanitarian",
+      "Solidarity",
+      "Engagement",
+      "Volunteering",
+      "Partnership"
+    ]
   },
   "Mission": {
     "title": "Our Mission",
@@ -69,6 +91,25 @@
     "viewAll": "View all our actions",
     "readMore": "Read more"
   },
+  "FeaturedMoments": {
+    "badge": "Our Moments",
+    "title": "Featured Moments",
+    "subtitle": "Relive the highlights of our club in pictures",
+    "moments": [
+      {
+        "title": "Board Installation 2024-2025",
+        "category": "Event"
+      },
+      {
+        "title": "Club Board 2024",
+        "category": "Board"
+      },
+      {
+        "title": "Club Anniversary",
+        "category": "Celebration"
+      }
+    ]
+  },
   "Testimonials": {
     "title": "Testimonials",
     "subtitle": "What our members say"
@@ -77,7 +118,11 @@
     "title": "Join Our Community",
     "description": "Together, we can do even more. Whether you want to become a member or support our actions, every contribution matters.",
     "join": "Become a Member",
-    "donate": "Make a Donation"
+    "donate": "Make a Donation",
+    "years": "years",
+    "members": "members",
+    "projects": "projects",
+    "rotaryFrAsia": "FR Rotary in Asia"
   },
   "About": {
     "title": "Our Club",
@@ -85,11 +130,13 @@
     "district": "District 3340 | Club 67334",
     "history": {
       "title": "Our History",
-      "content": "Rotary Club Pattaya Marina is the only French-speaking Rotary in Asia. A member of Rotary International District 3340, our club brings together professionals of diverse nationalities united by a common passion: serving the Pattaya community and its surroundings."
+      "content": "Rotary Club Pattaya Marina is the only French-speaking Rotary in Asia. A member of Rotary International District 3340, our club brings together professionals of diverse nationalities united by a common passion: serving the Pattaya community and its surroundings.",
+      "extendedContent": "Since our founding in {year}, we have touched thousands of lives through our education, health and community development projects. Our commitment to humanitarian service remains as strong today as it was at the beginning."
     },
     "mission": {
       "title": "Our Mission",
-      "content": "We are committed to improving the lives of people in need in Pattaya and the surrounding region. Through education, health, community development, and humanitarian aid projects, we take concrete action for a better world."
+      "content": "We are committed to improving the lives of people in need in Pattaya and the surrounding region. Through education, health, community development, and humanitarian aid projects, we take concrete action for a better world.",
+      "priorityAreas": "Our priority areas of action include youth education, access to healthcare, support for disadvantaged communities and promotion of sustainable development. Each project is chosen to maximize its positive impact on our community."
     },
     "meetings": {
       "title": "Our Meetings",
@@ -97,7 +144,10 @@
       "time": "7:00 PM",
       "place": "Siam Bayshore Resort",
       "address": "559 Moo 10, Beach Road, Pattaya, ChonBuri 20150, Thailand",
-      "description": "Our monthly meetings are an opportunity to plan our actions, welcome guests, and strengthen the bonds of friendship between our members."
+      "description": "Our monthly meetings are an opportunity to plan our actions, welcome guests, and strengthen the bonds of friendship between our members.",
+      "when": "When",
+      "where": "Where",
+      "visitorsWelcome": "Visitors are welcome! If you would like to attend one of our meetings to discover Rotary, please don't hesitate to contact us in advance."
     },
     "leadership": {
       "title": "Board 2024-2025",
@@ -107,14 +157,103 @@
       "vicePresident2": "2nd Vice President",
       "secretary": "Secretary & Foundation",
       "treasurer": "Treasurer",
-      "protocolChief": "Protocol Chief"
+      "protocolChief": "Protocol Chief",
+      "badge": "Leadership",
+      "subtitle": "Our dedicated leadership team guides the club towards excellence in community service"
     },
     "members": {
       "title": "Active Members",
-      "honor": "Honorary Member"
+      "honor": "Honorary Member",
+      "badge": "Community"
     },
     "presidents": {
-      "title": "Past Presidents"
+      "title": "Past Presidents",
+      "badge": "Heritage",
+      "subtitle": "A succession of dedicated leaders who have shaped our club over the years"
+    },
+    "hero": {
+      "years": "Years",
+      "members": "Members",
+      "district": "Rotary International"
+    },
+    "stats": {
+      "projectsCompleted": "Projects Completed",
+      "bathCollected": "Baht Raised",
+      "activeMembers": "Active Members",
+      "yearsOfService": "Years of Service"
+    },
+    "values": {
+      "badge": "Our Values",
+      "title": "What Guides Us",
+      "subtitle": "The fundamental principles that inspire our actions and strengthen our commitment"
+    },
+    "impact": {
+      "badge": "Our Impact",
+      "title": "Numbers That Speak",
+      "subtitle": "Since our inception, we have carried out concrete projects that have changed lives. Here are some of our achievements."
+    },
+    "join": {
+      "badge": "Join Us",
+      "title": "Become a Club Member",
+      "subtitle": "Do you share our values and wish to commit to community service? Find out how to become a member of our club.",
+      "steps": [
+        {
+          "title": "Contact Us",
+          "description": "Send us a message to express your interest. We'll be happy to discuss Rotary values and engagement opportunities with you."
+        },
+        {
+          "title": "Attend a Meeting",
+          "description": "Come discover our club at one of our meetings. It's the perfect opportunity to meet our members and experience Rotary."
+        },
+        {
+          "title": "Join the Team",
+          "description": "After getting to know each other, if you share our vision, we'll be delighted to welcome you as a new member of our club."
+        }
+      ],
+      "ctaTitle": "Ready to Make a Difference?",
+      "ctaDescription": "Contact us today to learn more about joining Rotary Club Pattaya Marina and begin your service journey.",
+      "contactButton": "Contact Us",
+      "callButton": "Call Us"
+    },
+    "photoGallery": {
+      "badge": "Photo Gallery",
+      "title": "Our Club in Action",
+      "subtitle": "Discover our activities in Pattaya through these moments captured during our events and projects",
+      "photos": [
+        {
+          "title": "Board Installation 2025",
+          "description": "Installation ceremony of the new board for the 2024-2025 Rotary year"
+        },
+        {
+          "title": "Donation to YWCA",
+          "description": "Presentation of a donation of 130,000 baht to the YWCA to support women in difficulty"
+        },
+        {
+          "title": "Prison Support",
+          "description": "Distribution of essential supplies to Pattaya prisoners"
+        },
+        {
+          "title": "Women's Day",
+          "description": "Celebration of International Women's Rights Day"
+        },
+        {
+          "title": "Singapore Convention",
+          "description": "Participation in the District 3340 convention in Singapore"
+        },
+        {
+          "title": "Club Anniversary",
+          "description": "Celebration of Rotary Club Pattaya Marina's anniversary"
+        }
+      ],
+      "projectsCallout": "More than 150 projects completed since our inception",
+      "discoverActions": "Discover all our actions on the Actions page"
+    },
+    "rotaryInfo": {
+      "title": "Member of Rotary International",
+      "description": "Rotary International brings together more than 1.4 million members across 200 countries and territories. Our club is part of this global network dedicated to humanitarian service and peace.",
+      "districtInfo": "Our club is part of District 3340 which covers Thailand. The district includes more than 70 Rotary and Rotaract clubs, united in their mission of community service.",
+      "clubInfo": "Unique identifier of our club within the Rotary International global network.",
+      "learnMore": "Learn more about Rotary International"
     }
   },
   "Actions": {
@@ -128,7 +267,17 @@
       "environment": "Environment"
     },
     "readMore": "Read more",
-    "backToList": "Back to actions"
+    "backToList": "Back to actions",
+    "project": "Project",
+    "projects": "Projects",
+    "noActions": "No actions at the moment.",
+    "cta": {
+      "badge": "Support Us",
+      "title": "Support Our Actions",
+      "description": "Every contribution makes a difference. Join us in our mission of service to the community.",
+      "donateButton": "Make a Donation",
+      "joinButton": "Join Us"
+    }
   },
   "Blog": {
     "title": "News",
@@ -148,7 +297,14 @@
   "Contact": {
     "title": "Contact Us",
     "subtitle": "We would love to hear from you",
+    "hero": {
+      "badge": "Contact Us",
+      "title": "Join Our Action",
+      "description": "Whether you want to become a member, participate in our projects, or simply learn more, we would love to hear from you"
+    },
     "form": {
+      "badge": "Send Us a Message",
+      "subtitle": "We will respond quickly",
       "name": "Your name",
       "email": "Your email",
       "subject": "Subject",
@@ -156,14 +312,65 @@
       "send": "Send message",
       "sending": "Sending...",
       "success": "Message sent successfully!",
-      "error": "Error sending message. Please try again."
+      "error": "Error sending message. Please try again.",
+      "title": "Send Us a Message"
     },
     "info": {
-      "title": "Information",
+      "title": "Contact Information",
       "address": "Address",
       "email": "Email",
       "phone": "Phone",
-      "meetings": "Meetings"
+      "meetings": "Meetings",
+      "schedule": "Schedule",
+      "followUs": "Follow Us",
+      "followDescription": "Stay informed about our actions and events on social media"
+    },
+    "map": {
+      "title": "Where to Find Us",
+      "subtitle": "We meet at Siam Bayshore Resort, Pattaya",
+      "address": {
+        "line1": "Siam Bayshore Resort",
+        "line2": "559 Moo 10, Beach Road",
+        "line3": "Pattaya, Chonburi 20150"
+      },
+      "venueName": "Siam Bayshore Resort"
+    },
+    "meetingGallery": {
+      "badge": "Our Meeting Place",
+      "title": "Siam Bayshore Resort, Pattaya",
+      "subtitle": "We meet in a friendly beachfront setting",
+      "items": {
+        "meetings": {
+          "title": "Our Meetings",
+          "description": "Every 1st and 3rd Friday of the month"
+        },
+        "events": {
+          "title": "Friendly Events",
+          "description": "Celebrations and sharing moments"
+        },
+        "team": {
+          "title": "Our Team",
+          "description": "Committed and passionate members"
+        }
+      }
+    },
+    "whyJoin": {
+      "title": "Why Join Us?",
+      "subtitle": "Be part of a global network of leaders committed to service and action",
+      "reasons": {
+        "network": {
+          "title": "International Network",
+          "description": "Join a network of 1.4 million members in 200 countries and territories"
+        },
+        "impact": {
+          "title": "Concrete Impact",
+          "description": "Participate in humanitarian projects that really change lives"
+        },
+        "development": {
+          "title": "Personal Development",
+          "description": "Develop your leadership skills and broaden your horizons"
+        }
+      }
     },
     "validation": {
       "nameRequired": "Name is required",
@@ -177,16 +384,103 @@
   "Donate": {
     "title": "Make a Donation",
     "subtitle": "Your generosity changes lives",
-    "description": "Every donation, regardless of the amount, directly contributes to our charitable actions. 100% of your donations are used for our projects.",
+    "description": "Your generosity allows us to fund our humanitarian projects and change lives",
     "bankTransfer": {
-      "title": "Bank Transfer",
+      "badge": "Bank Transfer",
+      "title": "Bank Details",
+      "subtitle": "Make a transfer using the information below",
+      "info": "Banking Information",
+      "clickToCopy": "Click to copy",
       "bank": "Bank",
+      "bankName": "Kasikorn Bank Public Co LTD Thailand",
+      "beneficiary": "Beneficiary",
+      "beneficiaryName": "Rotary Club Pattaya Marina",
+      "swiftCode": "SWIFT Code",
+      "swift": "KASITHBK",
       "account": "Account Number",
-      "name": "Account Name"
+      "accountNumber": "870-2-27445-2",
+      "important": "Important",
+      "importantMessage": "After your transfer, please confirm by email specifying the amount and the project you wish to support.",
+      "email": "contact@rotary-pattaya-marina.org",
+      "bankInfo": "Banking Information",
+      "confirmationText": "After your transfer, please confirm by email specifying the amount and the project you wish to support."
+    },
+    "impactGallery": {
+      "badge": "Impact of Your Donations",
+      "title": "Your Donations in Action",
+      "subtitle": "Discover how your contributions fund our humanitarian projects and help local communities",
+      "projects": {
+        "ywca": {
+          "title": "YWCA Support",
+          "amount": "130,000 ฿",
+          "description": "Aid to women and families in difficulty"
+        },
+        "prison": {
+          "title": "Prison Support",
+          "amount": "50,000 ฿",
+          "description": "Distribution of essential supplies"
+        },
+        "water": {
+          "title": "Drinking Water for Karen Villages",
+          "amount": "200,000 ฿",
+          "description": "Filtration systems and distribution"
+        },
+        "electricity": {
+          "title": "Rural Electrification",
+          "amount": "150,000 ฿",
+          "description": "Electrical installation at Mae Song Noi"
+        },
+        "womenDay": {
+          "title": "Women's Day",
+          "amount": "30,000 ฿",
+          "description": "Celebration and support for women"
+        },
+        "school": {
+          "title": "School Supplies",
+          "amount": "80,000 ฿",
+          "description": "Equipment for underprivileged schools"
+        },
+        "waterKaren": {
+          "title": "Drinking Water for Karen Villages",
+          "amount": "200,000 ฿",
+          "description": "Filtration systems and distribution"
+        },
+        "ruralElectrification": {
+          "title": "Rural Electrification",
+          "amount": "150,000 ฿",
+          "description": "Electrical installation at Mae Song Noi"
+        },
+        "schoolSupplies": {
+          "title": "School Supplies",
+          "amount": "80,000 ฿",
+          "description": "Equipment for underprivileged schools"
+        }
+      },
+      "footer": "Every baht counts and helps improve the lives of those in need. Thank you for your generosity!",
+      "viewAllProjects": "View all our projects",
+      "thankYouMessage": "Every baht counts and helps improve the lives of those in need. Thank you for your generosity!"
     },
     "otherWays": {
-      "title": "Other Ways",
-      "description": "You can also contact us directly to arrange your donation."
+      "title": "Other Ways to Contribute",
+      "subtitle": "Your support can take many forms",
+      "becomeMember": {
+        "title": "Become a Member",
+        "description": "Join our club and participate in our projects"
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "Companies: become a club partner"
+      },
+      "volunteer": {
+        "title": "Volunteering",
+        "description": "Offer your time and skills"
+      }
+    },
+    "cta": {
+      "title": "Every Gesture Counts",
+      "description": "Your generosity makes a real difference in the lives of those we help",
+      "contact": "Contact Us",
+      "viewActions": "View Our Actions"
     },
     "taxDeduction": "Donations may be tax-deductible. Contact us for more information."
   },
@@ -194,7 +488,159 @@
     "title": "Our Sponsors & Partners",
     "subtitle": "Thank you to those who make our actions possible",
     "become": "Become a Sponsor",
-    "becomeDescription": "Associate your business with actions that matter. Contact us to discover our partnership options."
+    "becomeDescription": "Associate your business with actions that matter. Contact us to discover our partnership options.",
+    "hero": {
+      "title": "Our Benefactors & Partners",
+      "subtitle": "Committed partners who help us achieve our humanitarian and community projects",
+      "badge": "Partners"
+    },
+    "impact": {
+      "title": "The Impact of Our Partnerships",
+      "subtitle": "Thanks to the support of our partners, we carry out concrete projects that change lives",
+      "projectsFunded": "Funded Projects",
+      "activePartners": "Active Partners",
+      "beneficiaries": "Beneficiaries",
+      "yearsCollaboration": "Years of Collaboration"
+    },
+    "rotarySection": {
+      "badge": "Rotary Network",
+      "title": "Our Rotary Partners",
+      "subtitle": "We collaborate with Rotary clubs around the world to amplify our humanitarian impact",
+      "district": {
+        "title": "District 3340",
+        "description": "Our district in Thailand"
+      },
+      "international": {
+        "title": "Rotary International",
+        "description": "Worldwide organization"
+      },
+      "clubs": {
+        "title": "Partner Clubs",
+        "description": "International collaboration"
+      },
+      "learnMore": "Learn more"
+    },
+    "gallery": {
+      "badge": "Our Collaborations",
+      "title": "Partnerships in Action",
+      "subtitle": "Discover the projects carried out through collaboration with our partners",
+      "projects": {
+        "waterDistribution": {
+          "title": "Drinking Water Distribution",
+          "partner": "Rotary E-Club District 9220",
+          "description": "Installation of filtration systems in Karen villages"
+        },
+        "petanque": {
+          "title": "Petanque Tournament",
+          "partner": "Big C Extra",
+          "description": "Charity event for Human Help Network"
+        },
+        "electrification": {
+          "title": "Rural Electrification",
+          "partner": "Rotary Club Brussels Erasme",
+          "description": "Electricity project in Mae Song Noi"
+        },
+        "petanqueTournament": {
+          "title": "Petanque Tournament",
+          "partner": "Big C Extra",
+          "description": "Charity event for Human Help Network"
+        },
+        "ruralElectrification": {
+          "title": "Rural Electrification",
+          "partner": "Rotary Club Brussels Erasme",
+          "description": "Electricity project in Mae Song Noi"
+        }
+      }
+    },
+    "whyPartner": {
+      "badge": "Benefits",
+      "title": "Why Become a Partner?",
+      "subtitle": "By partnering with Rotary Club Pattaya Marina, you contribute to humanitarian projects while strengthening your CSR commitment",
+      "benefits": {
+        "socialImpact": {
+          "title": "Measurable Social Impact",
+          "description": "Participate in concrete projects with tangible results and transparent tracking of fund usage."
+        },
+        "visibility": {
+          "title": "International Visibility",
+          "description": "Benefit from visibility within the Rotary International network present in 200 countries with 1.4 million members."
+        },
+        "network": {
+          "title": "Professional Network",
+          "description": "Join a network of committed professionals and develop lasting business relationships."
+        },
+        "recognition": {
+          "title": "Public Recognition",
+          "description": "Your logo and contribution are featured on our website and communications."
+        },
+        "csr": {
+          "title": "CSR Development",
+          "description": "Strengthen your corporate social responsibility policy with concrete actions."
+        },
+        "targetedProjects": {
+          "title": "Targeted Projects",
+          "description": "Choose the causes that matter to you: health, education, environment, local development."
+        },
+        "internationalVisibility": {
+          "title": "International Visibility",
+          "description": "Benefit from visibility within the Rotary International network present in 200 countries with 1.4 million members."
+        },
+        "professionalNetwork": {
+          "title": "Professional Network",
+          "description": "Join a network of committed professionals and develop lasting business relationships."
+        },
+        "publicRecognition": {
+          "title": "Public Recognition",
+          "description": "Your logo and contribution are featured on our website and communications."
+        },
+        "csrDevelopment": {
+          "title": "CSR Development",
+          "description": "Strengthen your corporate social responsibility policy with concrete actions."
+        }
+      }
+    },
+    "partnershipTypes": {
+      "title": "Partnership Types",
+      "subtitle": "Different ways to support us according to your goals and means",
+      "financial": {
+        "title": "Financial Partner",
+        "description": "Financial contribution to support our humanitarian projects and charity events.",
+        "features": [
+          "One-time or recurring support",
+          "Logo on our materials",
+          "Annual impact report",
+          "Event invitations"
+        ]
+      },
+      "inKind": {
+        "title": "In-Kind Partner",
+        "description": "Donation of products, services, or skills for our field actions.",
+        "features": [
+          "Material supply",
+          "Service provision",
+          "Technical expertise",
+          "Public recognition"
+        ]
+      },
+      "strategic": {
+        "title": "Strategic Partner",
+        "description": "Long-term collaboration with co-development of specific projects.",
+        "features": [
+          "Multi-year partnership",
+          "Project co-creation",
+          "Maximum visibility",
+          "Shared governance"
+        ]
+      }
+    },
+    "cta": {
+      "badge": "Become a Partner",
+      "title": "Join Our Partners",
+      "description": "Does your company want to partner with our humanitarian projects? Contact us to discover how we can collaborate.",
+      "contact": "Contact Us",
+      "donate": "Make a Donation"
+    },
+    "visitWebsite": "Visit website"
   },
   "Links": {
     "title": "Useful Links",
@@ -230,5 +676,48 @@
     "learnMore": "Learn more",
     "viewAll": "View all",
     "share": "Share"
+  },
+  "PhotoGallery": {
+    "badge": "Photo Gallery",
+    "title": "Our Club Life",
+    "subtitle": "Discover our events, actions and moments of conviviality that make our club rich",
+    "images": [
+      {
+        "title": "Board Installation",
+        "category": "Club Event"
+      },
+      {
+        "title": "Club Anniversary",
+        "category": "Celebration"
+      },
+      {
+        "title": "Singapore Convention",
+        "category": "International Event"
+      },
+      {
+        "title": "Women's Day",
+        "category": "Social Event"
+      },
+      {
+        "title": "Prison Donation",
+        "category": "Humanitarian Action"
+      },
+      {
+        "title": "YWCA Partnership",
+        "category": "Partnership"
+      }
+    ],
+    "stats": {
+      "activeMembers": "Active Members",
+      "projectsCompleted": "Projects Completed",
+      "partnerCountries": "Partner Countries",
+      "momentsShared": "Moments Shared"
+    }
+  },
+  "DonationForm": {
+    "selectAmount": "Select an amount (THB):",
+    "other": "Other",
+    "donateNow": "Donate Now",
+    "comingSoon": "Payment integration coming soon."
   }
 }

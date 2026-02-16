@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { Link } from '@/i18n/navigation';
 import { Heart, Building2, Copy, CheckCircle2, Mail, Info, Users, ArrowRight, Camera } from 'lucide-react';
@@ -8,6 +9,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 export function DonateContent() {
+  const tDonate = useTranslations('Donate');
+  const tBank = useTranslations('Donate.bankTransfer');
+  const tGallery = useTranslations('Donate.impactGallery');
+  const tOther = useTranslations('Donate.otherWays');
+  const tCta = useTranslations('Donate.cta');
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
   const copyToClipboard = (text: string, field: string) => {
@@ -17,10 +23,10 @@ export function DonateContent() {
   };
 
   const bankDetails = [
-    { label: 'Banque', value: 'Kasikorn Bank Public Co LTD Thailand', field: 'bank' },
-    { label: 'Bénéficiaire', value: 'Rotary Club Pattaya Marina', field: 'beneficiary' },
-    { label: 'Code SWIFT', value: 'KASITHBK', field: 'swift' },
-    { label: 'Numéro de compte', value: '870-2-27445-2', field: 'account' },
+    { label: tBank('bankName'), value: 'Kasikorn Bank Public Co LTD Thailand', field: 'bank' },
+    { label: tBank('beneficiary'), value: 'Rotary Club Pattaya Marina', field: 'beneficiary' },
+    { label: tBank('swiftCode'), value: 'KASITHBK', field: 'swift' },
+    { label: tBank('accountNumber'), value: '870-2-27445-2', field: 'account' },
   ];
 
   return (
@@ -56,7 +62,7 @@ export function DonateContent() {
               className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.1]"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Faire un Don
+              {tDonate('title')}
             </motion.h1>
 
             <motion.p
@@ -65,7 +71,7 @@ export function DonateContent() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-lg md:text-xl text-white/60 mb-12 leading-relaxed"
             >
-              Votre générosité permet de financer nos projets humanitaires et de changer des vies
+              {tDonate('subtitle')}
             </motion.p>
           </div>
         </div>
@@ -81,13 +87,13 @@ export function DonateContent() {
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">
                 <Building2 className="w-4 h-4" />
-                Virement Bancaire
+                {tBank('badge')}
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-                Coordonnées Bancaires
+                {tBank('title')}
               </h2>
               <p className="text-lg text-text-light">
-                Effectuez un virement avec les informations ci-dessous
+                {tBank('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -100,8 +106,8 @@ export function DonateContent() {
                     <Building2 className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">Informations Bancaires</h3>
-                    <p className="text-sm text-white/70">Cliquez pour copier</p>
+                    <h3 className="text-lg font-bold">{tBank('bankInfo')}</h3>
+                    <p className="text-sm text-white/70">{tBank('clickToCopy')}</p>
                   </div>
                 </div>
               </div>
@@ -139,9 +145,9 @@ export function DonateContent() {
             <div className="mt-8 flex items-start gap-4 bg-blue-50 border border-blue-100 rounded-xl p-6">
               <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold text-text-dark mb-2">Important</h4>
+                <h4 className="font-bold text-text-dark mb-2">{tBank('important')}</h4>
                 <p className="text-sm text-text-light mb-3">
-                  Après votre virement, merci de nous confirmer par email en précisant le montant et le projet que vous souhaitez soutenir.
+                  {tBank('confirmationText')}
                 </p>
                 <a
                   href="mailto:contact@rotary-pattaya-marina.org"
@@ -163,13 +169,13 @@ export function DonateContent() {
             <div className="text-center mb-8 md:mb-12">
               <div className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-accent/10 border border-accent/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.2em] text-accent mb-3 md:mb-4">
                 <Camera className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="hidden xs:inline">L'Impact de Vos Dons</span>
+                <span className="hidden xs:inline">{tGallery('badge')}</span>
               </div>
               <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-text-dark mb-3 md:mb-4 px-2" style={{ fontFamily: 'var(--font-heading)' }}>
-                Vos Dons en Action
+                {tGallery('title')}
               </h2>
               <p className="text-sm md:text-base lg:text-lg text-text-light max-w-2xl mx-auto px-4">
-                Découvrez comment vos contributions financent nos projets humanitaires et aident les communautés locales
+                {tGallery('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -178,39 +184,39 @@ export function DonateContent() {
             {[
               {
                 image: '/images/about/ywca-donation.jpg',
-                title: 'Soutien à la YWCA',
-                amount: '130,000 ฿',
-                description: 'Aide aux femmes et familles en difficulté'
+                title: tGallery('projects.ywca.title'),
+                amount: tGallery('projects.ywca.amount'),
+                description: tGallery('projects.ywca.description')
               },
               {
                 image: '/images/about/prison-donation.jpg',
-                title: 'Aide aux Détenus',
-                amount: '50,000 ฿',
-                description: 'Distribution de fournitures essentielles'
+                title: tGallery('projects.prison.title'),
+                amount: tGallery('projects.prison.amount'),
+                description: tGallery('projects.prison.description')
               },
               {
                 image: '/images/actions/filtre-eau-karen.jpg',
-                title: 'Eau Potable Villages Karen',
-                amount: '200,000 ฿',
-                description: 'Systèmes de filtration et distribution'
+                title: tGallery('projects.waterKaren.title'),
+                amount: tGallery('projects.waterKaren.amount'),
+                description: tGallery('projects.waterKaren.description')
               },
               {
                 image: '/images/actions/electricite-mae-song-noi.jpg',
-                title: 'Électrification Rurale',
-                amount: '150,000 ฿',
-                description: 'Installation électrique Mae Song Noi'
+                title: tGallery('projects.ruralElectrification.title'),
+                amount: tGallery('projects.ruralElectrification.amount'),
+                description: tGallery('projects.ruralElectrification.description')
               },
               {
                 image: '/images/about/women-day.jpg',
-                title: 'Journée de la Femme',
-                amount: '30,000 ฿',
-                description: 'Célébration et soutien aux femmes'
+                title: tGallery('projects.womenDay.title'),
+                amount: tGallery('projects.womenDay.amount'),
+                description: tGallery('projects.womenDay.description')
               },
               {
                 image: '/images/actions/ecole-hua-yai.jpg',
-                title: 'Fournitures Scolaires',
-                amount: '80,000 ฿',
-                description: 'Équipement pour écoles défavorisées'
+                title: tGallery('projects.schoolSupplies.title'),
+                amount: tGallery('projects.schoolSupplies.amount'),
+                description: tGallery('projects.schoolSupplies.description')
               },
             ].map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 0.1}>
@@ -249,13 +255,13 @@ export function DonateContent() {
           <ScrollReveal delay={0.3}>
             <div className="mt-8 md:mt-12 text-center px-4">
               <p className="text-sm md:text-base text-text-light mb-4 md:mb-6 max-w-2xl mx-auto">
-                Chaque baht compte et contribue à améliorer la vie des personnes dans le besoin. Merci pour votre générosité !
+                {tGallery('thankYouMessage')}
               </p>
               <Link
                 href="/actions"
                 className="inline-flex items-center gap-2 text-sm md:text-base text-accent font-bold hover:gap-4 transition-all"
               >
-                Voir tous nos projets
+                {tGallery('viewAllProjects')}
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </Link>
             </div>
@@ -269,10 +275,10 @@ export function DonateContent() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-                Autres Façons de Contribuer
+                {tOther('title')}
               </h2>
               <p className="text-lg text-text-light">
-                Votre soutien peut prendre plusieurs formes
+                {tOther('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -281,20 +287,20 @@ export function DonateContent() {
             {[
               {
                 icon: Users,
-                title: 'Devenir Membre',
-                description: 'Rejoignez notre club et participez à nos projets',
+                title: tOther('becomeMember.title'),
+                description: tOther('becomeMember.description'),
                 link: '/about'
               },
               {
                 icon: Building2,
-                title: 'Partenariat',
-                description: 'Entreprises : devenez partenaire du club',
+                title: tOther('partnership.title'),
+                description: tOther('partnership.description'),
                 link: '/sponsors'
               },
               {
                 icon: Heart,
-                title: 'Bénévolat',
-                description: 'Offrez votre temps et vos compétences',
+                title: tOther('volunteer.title'),
+                description: tOther('volunteer.description'),
                 link: '/contact'
               },
             ].map((way, index) => (
@@ -345,10 +351,10 @@ export function DonateContent() {
             <div className="text-center max-w-3xl mx-auto">
               <Heart className="w-12 h-12 mx-auto mb-6 text-white/70" />
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-[1.1]" style={{ fontFamily: 'var(--font-heading)' }}>
-                Chaque Geste Compte
+                {tCta('title')}
               </h2>
               <p className="text-lg md:text-xl text-white/50 mb-12 leading-relaxed">
-                Votre générosité fait une vraie différence dans la vie de ceux que nous aidons
+                {tCta('description')}
               </p>
 
               <div className="flex flex-wrap justify-center gap-4">
@@ -357,13 +363,13 @@ export function DonateContent() {
                   className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-bold text-primary transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95"
                 >
                   <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                  Nous Contacter
+                  {tCta('contact')}
                 </Link>
                 <Link
                   href="/actions"
                   className="group inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/[0.05] backdrop-blur-md px-8 py-4 text-sm font-bold text-white hover:bg-white/[0.1] hover:border-white/30 transition-all duration-300 hover:scale-105"
                 >
-                  Voir Nos Actions
+                  {tCta('viewActions')}
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

@@ -72,7 +72,7 @@ export function ActionsTimeline({ actions, locale }: Props) {
             className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-accent mb-6"
           >
             <Sparkles className="w-4 h-4" />
-            {actions.length} {actions.length > 1 ? 'Projets' : 'Projet'}
+            {actions.length} {actions.length > 1 ? t('projects') : t('project')}
           </motion.div>
 
           <motion.h1
@@ -104,7 +104,7 @@ export function ActionsTimeline({ actions, locale }: Props) {
         <div className="container-custom">
           {actions.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-text-light text-lg">Aucune action pour le moment.</p>
+              <p className="text-text-light text-lg">{t('noActions')}</p>
             </div>
           ) : (
             <div className="relative">
@@ -230,13 +230,13 @@ export function ActionsTimeline({ actions, locale }: Props) {
               >
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white mb-6">
                   <Heart className="w-4 h-4" />
-                  Soutenez-Nous
+                  {t('cta.badge')}
                 </div>
                 <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                  Soutenez Nos Actions
+                  {t('cta.title')}
                 </h2>
                 <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                  Chaque contribution fait la différence. Rejoignez-nous dans notre mission de service à la communauté.
+                  {t('cta.description')}
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
@@ -244,13 +244,13 @@ export function ActionsTimeline({ actions, locale }: Props) {
                     className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-primary font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl"
                   >
                     <Heart className="w-5 h-5" />
-                    Faire un Don
+                    {t('cta.donateButton')}
                   </Link>
                   <Link
                     href="/contact"
                     className="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 backdrop-blur-md px-8 py-4 text-white font-bold text-lg hover:bg-white/20 transition-all duration-300"
                   >
-                    Nous Rejoindre
+                    {t('cta.joinButton')}
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </div>

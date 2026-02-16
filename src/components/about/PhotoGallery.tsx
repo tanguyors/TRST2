@@ -4,41 +4,43 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Camera, Users, Heart, Globe } from 'lucide-react';
-
-const galleryImages = [
-  {
-    src: '/images/about/installation-2025.jpg',
-    title: 'Installation du Bureau',
-    category: 'Événement Club'
-  },
-  {
-    src: '/images/about/anniversary.jpg',
-    title: 'Anniversaire du Club',
-    category: 'Célébration'
-  },
-  {
-    src: '/images/about/singapore-convention.jpg',
-    title: 'Convention Singapore',
-    category: 'Événement International'
-  },
-  {
-    src: '/images/about/women-day.jpg',
-    title: 'Journée de la Femme',
-    category: 'Événement Social'
-  },
-  {
-    src: '/images/about/prison-donation.jpg',
-    title: 'Don aux Prisons',
-    category: 'Action Humanitaire'
-  },
-  {
-    src: '/images/about/ywca-donation.jpg',
-    title: 'Partenariat YWCA',
-    category: 'Partenariat'
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export function PhotoGallery() {
+  const t = useTranslations('PhotoGallery');
+
+  const galleryImages = [
+    {
+      src: '/images/about/installation-2025.jpg',
+      title: t('images.0.title'),
+      category: t('images.0.category')
+    },
+    {
+      src: '/images/about/anniversary.jpg',
+      title: t('images.1.title'),
+      category: t('images.1.category')
+    },
+    {
+      src: '/images/about/singapore-convention.jpg',
+      title: t('images.2.title'),
+      category: t('images.2.category')
+    },
+    {
+      src: '/images/about/women-day.jpg',
+      title: t('images.3.title'),
+      category: t('images.3.category')
+    },
+    {
+      src: '/images/about/prison-donation.jpg',
+      title: t('images.4.title'),
+      category: t('images.4.category')
+    },
+    {
+      src: '/images/about/ywca-donation.jpg',
+      title: t('images.5.title'),
+      category: t('images.5.category')
+    },
+  ];
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
@@ -46,13 +48,13 @@ export function PhotoGallery() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-accent mb-4">
               <Camera className="w-4 h-4" />
-              Galerie Photos
+              {t('badge')}
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-              Notre Vie de Club
+              {t('title')}
             </h2>
             <p className="text-xl text-text-light max-w-2xl mx-auto">
-              Découvrez nos événements, nos actions et les moments de convivialité qui font la richesse de notre club
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
@@ -98,10 +100,10 @@ export function PhotoGallery() {
         <ScrollReveal delay={0.3}>
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Users, value: '35+', label: 'Membres Actifs' },
-              { icon: Heart, value: '150+', label: 'Projets Réalisés' },
-              { icon: Globe, value: '5', label: 'Pays Partenaires' },
-              { icon: Camera, value: '1000+', label: 'Moments Partagés' },
+              { icon: Users, value: '35+', label: t('stats.activeMembers') },
+              { icon: Heart, value: '150+', label: t('stats.projectsCompleted') },
+              { icon: Globe, value: '5', label: t('stats.partnerCountries') },
+              { icon: Camera, value: '1000+', label: t('stats.momentsShared') },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

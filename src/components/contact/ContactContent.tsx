@@ -9,38 +9,44 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export function ContactContent() {
-  const t = useTranslations('Contact');
+  const tContact = useTranslations('Contact');
+  const tHero = useTranslations('Contact.hero');
+  const tForm = useTranslations('Contact.form');
+  const tInfo = useTranslations('Contact.info');
+  const tMap = useTranslations('Contact.map');
+  const tGallery = useTranslations('Contact.meetingGallery');
+  const tWhyJoin = useTranslations('Contact.whyJoin');
 
   const contactInfo = [
     {
       icon: MapPin,
-      label: 'Adresse',
+      label: tInfo('address'),
       value: SITE_CONFIG.address,
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: Mail,
-      label: 'Email',
+      label: tInfo('email'),
       value: SITE_CONFIG.email,
       color: 'from-accent to-accent/80',
       link: `mailto:${SITE_CONFIG.email}`
     },
     {
       icon: Phone,
-      label: 'Téléphone',
+      label: tInfo('phone'),
       value: SITE_CONFIG.phone,
       color: 'from-secondary to-secondary/80',
       link: `tel:${SITE_CONFIG.phone}`
     },
     {
       icon: Calendar,
-      label: 'Réunions',
+      label: tInfo('meetings'),
       value: SITE_CONFIG.meetingDay,
       color: 'from-primary to-primary/80'
     },
     {
       icon: Clock,
-      label: 'Horaire',
+      label: tInfo('schedule'),
       value: SITE_CONFIG.meetingTime,
       color: 'from-purple-500 to-purple-600'
     },
@@ -86,7 +92,7 @@ export function ContactContent() {
             className="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-accent mb-6"
           >
             <Sparkles className="w-4 h-4" />
-            Contactez-Nous
+            {tHero('badge')}
           </motion.div>
 
           <motion.h1
@@ -96,7 +102,7 @@ export function ContactContent() {
             className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Rejoignez Notre Action
+            {tHero('title')}
           </motion.h1>
 
           <motion.p
@@ -105,7 +111,7 @@ export function ContactContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/60 mb-8 max-w-2xl mx-auto"
           >
-            Que vous souhaitiez devenir membre, participer à nos projets ou simplement en savoir plus, nous serions ravis d'échanger avec vous
+            {tHero('description')}
           </motion.p>
         </div>
 
@@ -126,9 +132,9 @@ export function ContactContent() {
                   </div>
                   <div>
                     <h2 className="text-2xl font-black text-text-dark" style={{ fontFamily: 'var(--font-heading)' }}>
-                      Envoyez-nous un Message
+                      {tForm('title')}
                     </h2>
-                    <p className="text-sm text-text-light">Nous vous répondrons rapidement</p>
+                    <p className="text-sm text-text-light">{tForm('subtitle')}</p>
                   </div>
                 </div>
                 <ContactForm />
@@ -139,7 +145,7 @@ export function ContactContent() {
             <ScrollReveal delay={0.2}>
               <div>
                 <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
-                  Informations de Contact
+                  {tInfo('title')}
                 </h2>
 
                 <div className="space-y-6 mb-12">
@@ -181,9 +187,9 @@ export function ContactContent() {
 
                 {/* Social Links */}
                 <div className="bg-gradient-to-br from-primary to-accent rounded-3xl p-8 text-white">
-                  <h3 className="text-xl font-bold mb-4">Suivez-nous</h3>
+                  <h3 className="text-xl font-bold mb-4">{tInfo('followUs')}</h3>
                   <p className="text-white/80 mb-6">
-                    Restez informés de nos actions et événements sur les réseaux sociaux
+                    {tInfo('followDescription')}
                   </p>
                   <div className="flex gap-4">
                     <a
@@ -218,10 +224,10 @@ export function ContactContent() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-black text-text-dark mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
-                Où Nous Trouver
+                {tMap('title')}
               </h2>
               <p className="text-lg text-text-light max-w-2xl mx-auto">
-                Nous nous réunissons au {SITE_CONFIG.meetingPlace}
+                {tMap('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -244,9 +250,9 @@ export function ContactContent() {
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-text-dark text-sm mb-1">Siam Bayshore Resort</p>
-                    <p className="text-xs text-text-light">559 Moo 10, Beach Road</p>
-                    <p className="text-xs text-text-light">Pattaya, Chonburi 20150</p>
+                    <p className="font-bold text-text-dark text-sm mb-1">{tMap('venueName')}</p>
+                    <p className="text-xs text-text-light">{tMap('address.line1')}</p>
+                    <p className="text-xs text-text-light">{tMap('address.line2')}</p>
                   </div>
                 </div>
               </div>
@@ -262,13 +268,13 @@ export function ContactContent() {
             <div className="text-center mb-8 md:mb-12">
               <div className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-primary/10 border border-primary/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.2em] text-primary mb-3 md:mb-4">
                 <MapPin className="w-3 h-3 md:w-4 md:h-4" />
-                <span className="hidden xs:inline">Notre Lieu de Rencontre</span>
+                <span className="hidden xs:inline">{tGallery('badge')}</span>
               </div>
               <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-text-dark mb-3 md:mb-4 px-2" style={{ fontFamily: 'var(--font-heading)' }}>
-                Siam Bayshore Resort, Pattaya
+                {tGallery('title')}
               </h2>
               <p className="text-sm md:text-base lg:text-lg text-text-light max-w-2xl mx-auto px-4">
-                Nous nous réunissons dans un cadre convivial au bord de la plage
+                {tGallery('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -277,18 +283,18 @@ export function ContactContent() {
             {[
               {
                 image: '/images/about/installation-2025.jpg',
-                title: 'Nos Réunions',
-                description: 'Chaque 1er et 3ème vendredi du mois'
+                title: tGallery('items.meetings.title'),
+                description: tGallery('items.meetings.description')
               },
               {
                 image: '/images/about/anniversary.jpg',
-                title: 'Événements Conviviaux',
-                description: 'Célébrations et moments de partage'
+                title: tGallery('items.events.title'),
+                description: tGallery('items.events.description')
               },
               {
                 image: '/images/bureau-2024.jpg',
-                title: 'Notre Équipe',
-                description: 'Des membres engagés et passionnés'
+                title: tGallery('items.team.title'),
+                description: tGallery('items.team.description')
               },
             ].map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 0.1}>
@@ -325,10 +331,10 @@ export function ContactContent() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-                Pourquoi Nous Rejoindre ?
+                {tWhyJoin('title')}
               </h2>
               <p className="text-xl text-text-light max-w-2xl mx-auto">
-                Faites partie d'un réseau mondial de leaders engagés pour le service et l'action
+                {tWhyJoin('subtitle')}
               </p>
             </div>
           </ScrollReveal>
@@ -337,20 +343,20 @@ export function ContactContent() {
             {[
               {
                 icon: Users,
-                title: 'Réseau International',
-                description: 'Intégrez un réseau de 1,4 million de membres dans 200 pays et territoires',
+                title: tWhyJoin('reasons.network.title'),
+                description: tWhyJoin('reasons.network.description'),
                 color: 'from-blue-500 to-blue-600'
               },
               {
                 icon: Heart,
-                title: 'Impact Concret',
-                description: 'Participez à des projets humanitaires qui changent réellement des vies',
+                title: tWhyJoin('reasons.impact.title'),
+                description: tWhyJoin('reasons.impact.description'),
                 color: 'from-accent to-accent/80'
               },
               {
                 icon: Sparkles,
-                title: 'Développement Personnel',
-                description: 'Développez vos compétences en leadership et élargissez vos horizons',
+                title: tWhyJoin('reasons.development.title'),
+                description: tWhyJoin('reasons.development.description'),
                 color: 'from-secondary to-secondary/80'
               },
             ].map((reason, index) => (

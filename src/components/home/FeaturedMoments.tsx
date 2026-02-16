@@ -1,35 +1,38 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Camera, Users, Calendar } from 'lucide-react';
 
-const moments = [
-  {
-    title: 'Installation du Bureau 2024-2025',
-    image: '/images/installation-2025.jpg',
-    date: '2024',
-    category: 'Événement',
-    icon: Users
-  },
-  {
-    title: 'Bureau du Club 2024',
-    image: '/images/bureau-2024.jpg',
-    date: '2024',
-    category: 'Bureau',
-    icon: Users
-  },
-  {
-    title: 'Anniversaire du Club',
-    image: '/images/anniversary.jpg',
-    date: '2024',
-    category: 'Célébration',
-    icon: Calendar
-  },
-];
-
 export function FeaturedMoments() {
+  const t = useTranslations('FeaturedMoments');
+
+  const moments = [
+    {
+      title: t('moments.0.title'),
+      image: '/images/installation-2025.jpg',
+      date: '2024',
+      category: t('moments.0.category'),
+      icon: Users
+    },
+    {
+      title: t('moments.1.title'),
+      image: '/images/bureau-2024.jpg',
+      date: '2024',
+      category: t('moments.1.category'),
+      icon: Users
+    },
+    {
+      title: t('moments.2.title'),
+      image: '/images/anniversary.jpg',
+      date: '2024',
+      category: t('moments.2.category'),
+      icon: Calendar
+    },
+  ];
+
   return (
     <section className="py-12 md:py-24 lg:py-32 bg-warm-gray">
       <div className="container-custom px-4">
@@ -37,13 +40,13 @@ export function FeaturedMoments() {
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
             <div className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-primary/10 border border-primary/20 px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.2em] text-primary mb-3 md:mb-4">
               <Camera className="w-3 h-3 md:w-4 md:h-4" />
-              <span className="hidden xs:inline">Nos Moments</span>
+              <span className="hidden xs:inline">{t('badge')}</span>
             </div>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-text-dark mb-4 md:mb-6 px-2" style={{ fontFamily: 'var(--font-heading)' }}>
-              Moments Marquants
+              {t('title')}
             </h2>
             <p className="text-sm md:text-lg lg:text-xl text-text-light max-w-2xl mx-auto px-4">
-              Découvrez les moments forts de notre club et nos événements
+              {t('subtitle')}
             </p>
           </div>
         </ScrollReveal>
